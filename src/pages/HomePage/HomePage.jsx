@@ -1,5 +1,13 @@
+import {Layout} from "antd";
+import {AppHeader} from "../../components/header/AppHeader.jsx";
+import {Outlet} from "react-router";
+
 export function HomePage() {
     return (
-        <>Home Page</>
-    )
+        <Layout>
+            <AppHeader/>
+            <div style={{height: '10vh'}}/>
+            <Outlet/>
+        </Layout>
+    );
 }
