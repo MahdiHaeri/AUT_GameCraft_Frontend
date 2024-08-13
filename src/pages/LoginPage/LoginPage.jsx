@@ -1,8 +1,8 @@
-import {Col, Flex, Layout, Row, Grid} from "antd";
+import {Col, Flex, Layout, Row, Grid, Typography} from "antd";
 import backgroundImage from '/src/assets/svg/pattern.svg'
 import {theme} from "antd";
 import {LoginForm} from "./component/LoginForm.jsx";
-import logo from '/src/assets/svg/dark-flat.svg'
+import logo from '/src/assets/svg/dark-3d.svg'
 
 const {useToken} = theme
 const {useBreakpoint} = Grid;
@@ -30,7 +30,7 @@ export function LoginPage() {
                         ...(screens.md ? {height: '100%'} : {height: '80%'})
                     }}
                 >
-                    <Flex align={"center"} justify={"center"} style={{width: '100%', height: '100%'}}>
+                    <Flex align={"center"} justify={"center"} style={{width: '100%', height: '100%', padding: '1rem'}}>
                         <LoginForm/>
                     </Flex>
                 </Col>
@@ -43,10 +43,13 @@ export function LoginPage() {
                     }}
                 >
                     <Flex
+                        vertical
                         align={"center"}
                         justify={"center"}
-                        style={{height: '100%', width: '100%'}}
+                        style={{height: '100%', width: '100%', padding: '1rem'}}
+                        gap={1}
                     >
+                        <Typography.Title style={{color: token.colorAction, fontWeight: 'bolder'}}> Login </Typography.Title>
                         <img src={logo} alt={'logo'} width={'auto'} height={'100px'}/>
                     </Flex>
                 </Col>

@@ -6,7 +6,7 @@ import ROUTES from "../../../config/routes.js";
 
 const {useToken} = theme
 
-export function LoginForm() {
+export function SignUpForm() {
     const {token} = useToken()
 
     return (
@@ -37,13 +37,10 @@ export function LoginForm() {
                     <img src={logo} alt={logo} width={'auto'} height={'50px'}/>
                 </Divider>
 
+                <Input placeholder={"Display Name"} size={'large'} variant={'filled'}/>
                 <Input placeholder={"Email"} size={'large'} variant={'filled'}/>
-
+                <Input placeholder={"Phone Number"} size={'large'} variant={'filled'}/>
                 <Input.Password placeholder={"Password"} size={"large"} variant={'filled'}/>
-
-                <Flex align={"center"} justify={"start"} style={{width: '100%'}}>
-                    <NavLink to={"/forgot-password"} style={{fontSize: 'small'}}>Forgot Password?</NavLink>
-                </Flex>
             </Flex>
             <Flex
                 vertical
@@ -52,9 +49,9 @@ export function LoginForm() {
                 style={{width: '100%'}}
                 gap={"small"}
             >
-                <Button type={"primary"} size={"large"} style={{width: '100%'}}>Login</Button>
-                <Typography.Text type={'secondary'}> Don't have an account? <NavLink
-                    to={ROUTES.SIGNUP}>Register</NavLink></Typography.Text>
+                <Button type={"primary"} size={"large"} style={{width: '100%'}}>Register</Button>
+                <Typography.Text type={'secondary'}>Already have an account? <NavLink
+                    to={ROUTES.LOGIN}>Login</NavLink></Typography.Text>
             </Flex>
         </Flex>
     )
