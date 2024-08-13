@@ -54,7 +54,7 @@ export function AppHeader() {
                     <img
                         src={logo}
                         alt={'gamecraft-logo'}
-                        style={{height: '70%', width: "auto", maxHeight: '60px'}}
+                        style={{height: '80%', width: "auto", maxHeight: '60px'}}
                     />
 
                     <Space size={"small"}>
