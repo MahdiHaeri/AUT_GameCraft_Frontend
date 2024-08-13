@@ -78,8 +78,8 @@ export function AppHeader() {
                     <Divider type={"vertical"}
                              style={{height: '50%', borderWidth: '4px', borderRadius: '8px', margin: 0}}/>
                     <Space size={"small"}>
-                        <Button type={"primary"} style={{fontWeight: "bolder"}} onClick={() => navigate(ROUTES.LOGIN)}>SignUp</Button>
-                        <Button type={"primary"} style={{fontWeight: "bolder"}} onClick={() => navigate(ROUTES.SIGNUP)}>SignIn</Button>
+                        <Button type={"primary"} style={{fontWeight: "bolder"}} onClick={() => navigate(ROUTES.SIGNUP)}>SignUp</Button>
+                        <Button type={"primary"} style={{fontWeight: "bolder"}} onClick={() => navigate(ROUTES.LOGIN)}>Login</Button>
                     </Space>
                 </Flex>
             </Flex>
