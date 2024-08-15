@@ -4,19 +4,19 @@ import logo from '/src/assets/svg/dark-3d.svg';
 import {useLocation, useNavigate} from "react-router";
 import ROUTES from "../../config/routes.js";
 import {NAVIGATIONS} from "../../config/navigations.js";
-import PropTypes from "prop-types";
+
 
 const {useToken} = theme
 const {Header} = Layout
 
-export function AppHeader({parentRef}) {
+export function AppHeader() {
     const [shadow, setShadow] = useState(false);
-    const navigate = useNavigate();
+    const navigate = useNavigate()
     const location = useLocation(); // Get the current location
-    const { token } = useToken();
+    const {token} = useToken();
 
     const handleScroll = () => {
-        if (parentRef.current.scrollTop > 0) {
+        if (window.scrollY > 0) {
             setShadow(true);
         } else {
             setShadow(false);
@@ -24,17 +24,11 @@ export function AppHeader({parentRef}) {
     };
 
     useEffect(() => {
-        const parentElement = parentRef.current;
-        if (parentElement) {
-            parentElement.addEventListener('scroll', handleScroll);
-        }
-
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            if (parentElement) {
-                parentElement.removeEventListener('scroll', handleScroll);
-            }
+            window.removeEventListener('scroll', handleScroll);
         };
-    }, [parentRef]);
+    }, []);
 
     const isActive = (path) => location.pathname === path;
 
@@ -44,7 +38,7 @@ export function AppHeader({parentRef}) {
                 position: 'fixed',
                 top: 0,
                 right: 0,
-                zIndex: 1000,
+                zIndex: 1,
                 width: '100%',
                 height: '10vh',
                 minHeight: '60px',
@@ -84,16 +78,13 @@ export function AppHeader({parentRef}) {
                     <Divider type={"vertical"}
                              style={{height: '50%', borderWidth: '4px', borderRadius: '8px', margin: 0}}/>
                     <Space size={"small"}>
-                        <Button type={"primary"} style={{fontWeight: "bolder"}} onClick={() => navigate(ROUTES.SIGNUP)}>SignUp</Button>
-                        <Button type={"primary"} style={{fontWeight: "bolder"}} onClick={() => navigate(ROUTES.LOGIN)}>Login</Button>
+                        <Button type={"primary"} style={{fontWeight: "bolder"}}
+                                onClick={() => navigate(ROUTES.SIGNUP)}>SignUp</Button>
+                        <Button type={"primary"} style={{fontWeight: "bolder"}}
+                                onClick={() => navigate(ROUTES.LOGIN)}>Login</Button>
                     </Space>
                 </Flex>
             </Flex>
         </Header>
     )
-}
-
-// Define PropTypes
-AppHeader.propTypes = {
-    parentRef: PropTypes.object.isRequired
 }
