@@ -35,7 +35,7 @@ export function AppHeader() {
     return (
         <Header
             style={{
-                position: 'fixed',
+                position: 'sticky',
                 top: 0,
                 right: 0,
                 zIndex: 1,

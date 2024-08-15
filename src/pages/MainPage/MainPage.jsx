@@ -14,7 +14,7 @@ export function MainPage() {
             <Flex style={{width: '100vw', minHeight: '100vh'}}>
                 <Layout>
                     <AppHeader/>
-                    <Layout.Content style={{marginTop: '10vh'}}>
+                    <Layout.Content>
                         <Outlet/>
                     </Layout.Content>
                     <AppFooter/>

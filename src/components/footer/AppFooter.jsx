@@ -59,11 +59,11 @@ export function AppFooter() {
                     flex={1}
                     gap={"small"}
                 >
-                    <Button type={"text"} shape={"circle"} icon={<YoutubeFilled/>}/>
-                    <Button type={"text"} shape={"circle"} icon={<XOutlined/>}/>
-                    <Button type={"text"} shape={"circle"} icon={<InstagramOutlined/>}/>
-                    <Button type={"text"} shape={"circle"} icon={<FacebookFilled/>}/>
-                    <Button type={"text"} shape={"circle"} icon={<LinkedinFilled/>}/>
+                    <Button type={"text"} shape={"circle"} size={"large"} icon={<YoutubeFilled/>}/>
+                    <Button type={"text"} shape={"circle"} size={"large"} icon={<XOutlined/>}/>
+                    <Button type={"text"} shape={"circle"} size={"large"} icon={<InstagramOutlined/>}/>
+                    <Button type={"text"} shape={"circle"} size={"large"} icon={<FacebookFilled/>}/>
+                    <Button type={"text"} shape={"circle"} size={"large"} icon={<LinkedinFilled/>}/>
                 </Flex>
             </Flex>
             <Divider>
