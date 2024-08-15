@@ -4,19 +4,19 @@ import logo from '/src/assets/svg/dark-3d.svg';
 import {useLocation, useNavigate} from "react-router";
 import ROUTES from "../../config/routes.js";
 import {NAVIGATIONS} from "../../config/navigations.js";
-
+import PropTypes from "prop-types";
 
 const {useToken} = theme
 const {Header} = Layout
 
-export function AppHeader() {
+export function AppHeader({parentRef}) {
     const [shadow, setShadow] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const location = useLocation(); // Get the current location
     const { token } = useToken();
 
     const handleScroll = () => {
-        if (window.scrollY > 0) {
+        if (parentRef.current.scrollTop > 0) {
             setShadow(true);
         } else {
             setShadow(false);
@@ -24,11 +24,17 @@ export function AppHeader() {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        const parentElement = parentRef.current;
+        if (parentElement) {
+            parentElement.addEventListener('scroll', handleScroll);
+        }
+
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            if (parentElement) {
+                parentElement.removeEventListener('scroll', handleScroll);
+            }
         };
-    }, []);
+    }, [parentRef]);
 
     const isActive = (path) => location.pathname === path;
 
@@ -38,14 +44,14 @@ export function AppHeader() {
                 position: 'fixed',
                 top: 0,
                 right: 0,
-                zIndex: 1,
+                zIndex: 1000,
                 width: '100%',
                 height: '10vh',
                 minHeight: '60px',
                 maxHeight: '100px',
                 background: token.colorPrimary,
                 transition: 'box-shadow 0.3s',
-                boxShadow: shadow ? '0 4px 4px rgba(0, 0, 0, 0.1)' : 'none',
+                boxShadow: shadow ? '0 10px 20px rgba(0, 0, 0, 0.5)' : 'none',
                 padding: '0.5rem 2rem',
             }}
         >
@@ -85,4 +91,9 @@ export function AppHeader() {
             </Flex>
         </Header>
     )
+}
+
+// Define PropTypes
+AppHeader.propTypes = {
+    parentRef: PropTypes.object.isRequired
 }

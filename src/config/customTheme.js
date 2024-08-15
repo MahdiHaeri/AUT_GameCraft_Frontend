@@ -8,12 +8,12 @@ const customTheme = {
     algorithm: theme.defaultAlgorithm,
     token: {
         fontFamily: "SF-Pro-Rounded",
-        borderRadius: 12,
+        borderRadius: 16,
         colorPrimary: "#3c3a7d",
         primaryColor: "#3c3a7d",
-        secondaryColor: "#6AF9C4",
+        secondaryColor: "#01B582",
         colorInfo: "#3c3a7d",
-        colorAction: "#6AF9C4",
+        colorAction: "#01B582",
     }
 }
 

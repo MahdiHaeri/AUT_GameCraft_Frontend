@@ -5,6 +5,7 @@ import {LoginPage} from "../pages/LoginPage/LoginPage.jsx";
 import {SignUpPage} from "../pages/SignUpPage/SignUpPage.jsx";
 import {DashboardPage} from "../pages/DashboardPage/DashboardPage.jsx";
 import {NotFoundPage} from "../pages/NotFoundPage/NotFoundPage.jsx";
+import {StaffView} from "../view/StaffView/StaffView.jsx";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
             {path: ROUTES.FAQ, element: <div> FAQ </div>},
             {path: ROUTES.SPONSOR, element: <div> Sponsor</div>},
             {path: ROUTES.BLOG, element: <div> Blog </div>},
-            {path: ROUTES.STAFFS, element: <div> Staffs </div>},
+            {path: ROUTES.STAFFS, element: <StaffView />},
         ]
     },
     {path: ROUTES.LOGIN, element: <LoginPage/>},
