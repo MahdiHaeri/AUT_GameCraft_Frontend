@@ -6,13 +6,14 @@ import {SignUpPage} from "../pages/SignUpPage/SignUpPage.jsx";
 import {DashboardPage} from "../pages/DashboardPage/DashboardPage.jsx";
 import {NotFoundPage} from "../pages/NotFoundPage/NotFoundPage.jsx";
 import {StaffView} from "../view/StaffView/StaffView.jsx";
+import {HomeView} from "../view/HomeView/HomeView.jsx";
 
 const router = createBrowserRouter([
     {
         path: ROUTES.HOME,
         element: <MainPage/>,
         children: [
-            {path: ROUTES.HOME, element: <div> Home </div>},
+            {path: ROUTES.HOME, element: <HomeView/>},
             {path: ROUTES.HISTORY, element: <div> History </div>},
             {path: ROUTES.FAQ, element: <div> FAQ </div>},
             {path: ROUTES.SPONSOR, element: <div> Sponsor</div>},

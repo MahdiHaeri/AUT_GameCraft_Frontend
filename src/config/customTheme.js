@@ -10,8 +10,6 @@ const customTheme = {
         fontFamily: "SF-Pro-Rounded",
         borderRadius: 16,
         colorPrimary: "#3c3a7d",
-        primaryColor: "#3c3a7d",
-        secondaryColor: "#01B582",
         colorInfo: "#3c3a7d",
         colorAction: "#01B582",
     }

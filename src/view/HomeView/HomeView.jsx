@@ -1,10 +1,10 @@
-import {StaffContainer} from "./component/StaffContainer.jsx";
 import {Flex, theme} from "antd";
-import backgroundPattern from '/src/assets/svg/pattern.svg'
+import backgroundPattern from "../../assets/svg/pattern.svg";
+import {Sponsors} from "../../components/sponsor/Sponsors.jsx";
 
 const {useToken} = theme
 
-export function StaffView() {
+export function HomeView() {
     const {token} = useToken()
 
     return (
@@ -16,10 +16,9 @@ export function StaffView() {
                 backgroundColor: token.colorPrimary,
                 backgroundImage: `url(${backgroundPattern})`,
                 padding: '5rem',
-                paddingTop: '5rem',
             }}
         >
-            <StaffContainer/>
+            <Sponsors />
         </Flex>
     )
 }
