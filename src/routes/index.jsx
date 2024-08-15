@@ -1,5 +1,5 @@
 import {createBrowserRouter} from "react-router-dom";
-import {HomePage} from "../pages/HomePage/HomePage.jsx";
+import {MainPage} from "../pages/MainPage/MainPage.jsx";
 import ROUTES from "../config/routes.js";
 import {LoginPage} from "../pages/LoginPage/LoginPage.jsx";
 import {SignUpPage} from "../pages/SignUpPage/SignUpPage.jsx";
@@ -9,7 +9,7 @@ import {NotFoundPage} from "../pages/NotFoundPage/NotFoundPage.jsx";
 const router = createBrowserRouter([
     {
         path: ROUTES.HOME,
-        element: <HomePage/>,
+        element: <MainPage/>,
         children: [
             {path: ROUTES.HOME, element: <div> Home </div>},
             {path: ROUTES.HISTORY, element: <div> History </div>},
