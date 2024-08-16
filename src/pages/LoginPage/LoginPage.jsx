@@ -4,6 +4,7 @@ import {theme} from "antd";
 import {LoginForm} from "./component/LoginForm.jsx";
 import logo from '/src/assets/svg/dark-3d.svg'
 import {Helmet} from "react-helmet-async";
+import {useTranslation} from "react-i18next";
 
 const {useToken} = theme
 const {useBreakpoint} = Grid;
@@ -12,6 +13,7 @@ const {useBreakpoint} = Grid;
 export function LoginPage() {
     const {token} = useToken()
     const screens = useBreakpoint()
+    const {t} = useTranslation()
 
     return (
         <>
@@ -57,7 +59,9 @@ export function LoginPage() {
                                 style={{height: '100%', width: '100%', padding: '1rem'}}
                                 gap={1}
                             >
-                                <Typography.Title style={{color: token.colorAction, fontWeight: 'bolder'}}> Login </Typography.Title>
+                                <Typography.Title style={{color: token.colorAction, fontWeight: 'bolder'}}>
+                                    {t('app.auth.login')}
+                                </Typography.Title>
                                 <img src={logo} alt={'logo'} width={'auto'} height={'100px'}/>
                             </Flex>
                         </Col>

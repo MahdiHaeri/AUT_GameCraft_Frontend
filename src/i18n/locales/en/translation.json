@@ -11,11 +11,14 @@
     },
     "auth": {
       "login": "Login",
-      "signup": "Signup",
+      "signUp": "Signup",
+      "register": "Register",
       "email": "Email",
       "password": "Password",
+      "displayName": "Display Name",
+      "phoneNumber": "Phone Number",
       "forgotPassword": "Forgot Password?",
-      "donNotHaveAccount": "Don't have an account?",
+      "doNotHaveAccount": "Don't have an account?",
       "alreadyHaveAccount": "Already have an account?"
     },
     "intro": {

@@ -11,11 +11,14 @@
     },
     "auth": {
       "login": "ورود",
-      "signup": "ثبت نام",
+      "signUp": "ثبت نام",
+      "register": "ثبت نام",
       "email": "ایمیل",
       "password": "رمز عبور",
+      "displayName": "نام نمایشی",
+      "phoneNumber": "شماره تلفن",
       "forgotPassword": "رمز عبور خود را فراموش کرده اید؟",
-      "donNotHaveAccount": "حساب کاربری ندارید؟",
+      "doNotHaveAccount": "حساب کاربری ندارید؟",
       "alreadyHaveAccount": "حساب کاربری دارید؟"
     },
     "intro": {

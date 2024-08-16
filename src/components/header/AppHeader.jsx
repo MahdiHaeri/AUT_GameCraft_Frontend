@@ -86,7 +86,7 @@ export function AppHeader() {
                             style={{fontWeight: "bolder"}}
                             onClick={() => navigate(ROUTES.SIGNUP)}
                         >
-                            {t('app.auth.signup')}
+                            {t('app.auth.signUp')}
                         </Button>
                         <Button
                             type={"primary"}
