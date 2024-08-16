@@ -3,6 +3,7 @@ import backgroundPattern from "../../assets/svg/pattern.svg";
 import {Sponsors} from "../../components/sponsor/Sponsors.jsx";
 import {GameCraftIntro} from "../../components/introduction/GameCraftIntro.jsx";
 import {AboutUs} from "../../components/aboutUs/AboutUs.jsx";
+import {Prizes} from "../../components/prize/Prizes.jsx";
 
 const {useToken} = theme
 
@@ -24,6 +25,7 @@ export function HomeView() {
         >
             <GameCraftIntro/>
             <AboutUs/>
+            <Prizes/>
             <Sponsors />
         </Flex>
     )

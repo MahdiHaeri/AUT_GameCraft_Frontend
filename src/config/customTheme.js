@@ -5,7 +5,7 @@ import '/src/assets/fonts/Estedad-v7.3/estedad.css'
 import '/src/assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css'
 
 const customTheme = {
-    algorithm: theme.darkAlgorithm,
+    algorithm: theme.defaultAlgorithm,
     token: {
         // fontFamily: "SF-Pro-Rounded",
         borderRadius: 16,
