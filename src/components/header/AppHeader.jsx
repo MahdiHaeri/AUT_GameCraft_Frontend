@@ -3,17 +3,20 @@ import {useEffect, useState} from "react";
 import logo from '/src/assets/svg/dark-3d.svg';
 import {useLocation, useNavigate} from "react-router";
 import ROUTES from "../../config/routes.js";
-import {MainNavigations} from "../../config/mainNavigations.js";
+import {useMainNavigations} from "../../config/mainNavigations.jsx";
+import {useTranslation} from "react-i18next";
 
 
 const {useToken} = theme
 const {Header} = Layout
 
 export function AppHeader() {
+    const MainNavigations = useMainNavigations()
     const [shadow, setShadow] = useState(false);
     const navigate = useNavigate()
     const location = useLocation(); // Get the current location
     const {token} = useToken();
+    const {t} = useTranslation()
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -78,10 +81,20 @@ export function AppHeader() {
                     <Divider type={"vertical"}
                              style={{height: '50%', borderWidth: '4px', borderRadius: '8px', margin: 0}}/>
                     <Space size={"small"}>
-                        <Button type={"primary"} style={{fontWeight: "bolder"}}
-                                onClick={() => navigate(ROUTES.SIGNUP)}>SignUp</Button>
-                        <Button type={"primary"} style={{fontWeight: "bolder"}}
-                                onClick={() => navigate(ROUTES.LOGIN)}>Login</Button>
+                        <Button
+                            type={"primary"}
+                            style={{fontWeight: "bolder"}}
+                            onClick={() => navigate(ROUTES.SIGNUP)}
+                        >
+                            {t('app.auth.signup')}
+                        </Button>
+                        <Button
+                            type={"primary"}
+                            style={{fontWeight: "bolder"}}
+                            onClick={() => navigate(ROUTES.LOGIN)}
+                        >
+                            {t('app.auth.login')}
+                        </Button>
                     </Space>
                 </Flex>
             </Flex>

@@ -1,4 +1,63 @@
 {
-  "welcome": "Welcome to the Event",
-  "description": "This is a university event."
+  "app": {
+    "mainNavigation": {
+      "home": "Home",
+      "news": "News",
+      "faq": "FAQ",
+      "staffs": "Staffs",
+      "history": "History",
+      "sponsors": "Sponsors",
+      "dashboard": "Dashboard"
+    },
+    "auth": {
+      "login": "Login",
+      "signup": "Signup",
+      "email": "Email",
+      "password": "Password",
+      "forgotPassword": "Forgot Password?",
+      "donNotHaveAccount": "Don't have an account?",
+      "alreadyHaveAccount": "Already have an account?"
+    },
+    "intro": {
+      "title": "GameCraft",
+      "subtitle": "The best game development platform",
+      "description": "GameCraft is a platform for game developers to create, share and play games. It is a place where you can find the best games and the best developers. Join us now and start creating your own games!"
+    },
+    "aboutUs": {
+      "title": "About Us",
+      "description": "GameCraft is a platform for game developers to create, share and play games. It is a place where you can find the best games and the best developers. Join us now and start creating your own games!"
+    },
+    "prizes": {
+      "title": "Prizes",
+      "firstTeam": "1st Team",
+      "firstTeamPrize": "9 Million Toman",
+      "secondTeam": "2nd Team",
+      "secondTeamPrize": "6 Million Toman",
+      "thirdTeam": "3rd Team",
+      "thirdTeamPrize": "3 Million Toman"
+    },
+    "sponsors": {
+      "title": "Sponsors"
+    },
+    "footer": {
+      "autGameCraft": "Aut GameCraft",
+      "copyRight": "© 2024 GameCraft. All rights reserved."
+    }
+  },
+  "button": {
+    "submit": "Submit",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "SignUp",
+    "cancel": "Cancel",
+    "events": "Events",
+    "teamStatus": "Team Status",
+    "games": "Games",
+    "shoppingBag": "Shopping Bag",
+    "staffs": "Staffs"
+  },
+  "error": {
+    "404": "page not found",
+    "500": "internal server error"
+  }
 }

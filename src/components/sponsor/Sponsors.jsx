@@ -5,11 +5,15 @@ import medrickLogo from '/src/assets/images/logo/medrick-logo.png'
 import dreamEventLogo from '/src/assets/images/logo/dream-event.png'
 import pgjLogo from '/src/assets/images/logo/pgj.png'
 import myketLogo from '/src/assets/images/logo/myket.png'
+import {useTranslation} from "react-i18next";
 
 export function Sponsors() {
+    const {t} = useTranslation()
     return (
         <Flex align={"center"} justify={"space-between"} style={{width: '100%'}} vertical>
-            <Typography.Title level={1} style={{fontWeight: 'bolder'}}> Sponsors </Typography.Title>
+            <Typography.Title level={1} style={{fontWeight: 'bolder'}}>
+                {t('app.sponsors.title')}
+            </Typography.Title>
             <Row align={"middle"} justify={"center"} gutter={[100, 32]}>
                 <Col>
                     <img

@@ -11,11 +11,13 @@ import {
     XOutlined,
     YoutubeFilled
 } from "@ant-design/icons";
+import {useTranslation} from "react-i18next";
 
 const {useToken} = theme
 
 export function AppFooter() {
     const {token} = useToken();
+    const {t} = useTranslation()
 
     return (
         <Footer
@@ -26,7 +28,9 @@ export function AppFooter() {
                 padding: token.padding,
             }}
         >
-            <Typography.Title level={2}>Aut Gamecraft</Typography.Title>
+            <Typography.Title level={2}>
+                {t('app.footer.autGameCraft')}
+            </Typography.Title>
             <Flex align={"center"} justify={"space-between"} style={{width: '100%'}}>
                 <Flex
                     align={"center"}
@@ -68,7 +72,7 @@ export function AppFooter() {
             </Flex>
             <Divider>
                 <Typography.Text type={"secondary"}>
-                    © 2021 Aut Gamecraft. All rights reserved.
+                    {t('app.footer.copyRight')}
                 </Typography.Text>
             </Divider>
         </Footer>

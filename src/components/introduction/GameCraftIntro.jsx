@@ -1,11 +1,13 @@
 import {Button, Col, Flex, Row, theme, Typography} from "antd";
 import logo from '/src/assets/svg/dark-3d-bulb.svg'
 import {InstagramOutlined, XOutlined, YoutubeFilled} from "@ant-design/icons";
+import {useTranslation} from "react-i18next";
 
 const {useToken} = theme
 
 export function GameCraftIntro() {
     const {token} = useToken();
+    const {t} = useTranslation()
 
     return (
         <Flex align={"center"} justify={"center"} style={{width: '100%'}}>
@@ -18,10 +20,14 @@ export function GameCraftIntro() {
                         style={{width: '100%'}}
                         gap={"small"}
                     >
-                        <Typography.Title level={1} style={{color: token.colorAction, fontWeight: "bolder", fontSize: '5rem', marginBottom: '1rem'}}>GameCraft</Typography.Title>
-                        <Typography.Title level={3} style={{fontWeight: "bold", margin: 0}}>Lorem ipsum dolor sit amet.</Typography.Title>
+                        <Typography.Title level={1} style={{color: token.colorAction, fontWeight: "bolder", fontSize: '5rem', marginBottom: '1rem'}}>
+                            {t('app.intro.title')}
+                        </Typography.Title>
+                        <Typography.Title level={3} style={{fontWeight: "bold", margin: 0}}>
+                            {t('app.intro.subtitle')}
+                        </Typography.Title>
                         <Typography.Title level={4} style={{margin: '0px'}}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam assumenda aut consequuntur corporis cum doloremque dolorum earum facilis, fugiat illum, ipsum libero minus molestias nulla officia praesentium provident quam ratione repellat repudiandae sapiente sunt tenetur, ullam vel voluptate voluptatem.
+                            {t('app.intro.description')}
                         </Typography.Title>
                         <Flex align={"center"} justify={"center"} gap={"small"} wrap>
                             <Button
