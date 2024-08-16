@@ -7,12 +7,22 @@ import '/src/assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css'
 const customTheme = {
     algorithm: theme.defaultAlgorithm,
     token: {
+
         // fontFamily: "SF-Pro-Rounded",
         borderRadius: 16,
         colorPrimary: "#3c3a7d",
         colorInfo: "#3c3a7d",
         colorAction: "#01B582",
-    }
+
+    },
+
+    components: {
+        Timeline: {
+            dotBg: 'transparent',
+            tailColor: '#01B582',
+            tailWidth: 10,
+        },
+    },
 }
 
 export default customTheme
