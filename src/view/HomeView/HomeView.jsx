@@ -2,6 +2,7 @@ import {Flex, theme} from "antd";
 import backgroundPattern from "../../assets/svg/pattern.svg";
 import {Sponsors} from "../../components/sponsor/Sponsors.jsx";
 import {GameCraftIntro} from "../../components/introduction/GameCraftIntro.jsx";
+import {AboutUs} from "../../components/aboutUs/AboutUs.jsx";
 
 const {useToken} = theme
 
@@ -22,6 +23,7 @@ export function HomeView() {
             gap={"large"}
         >
             <GameCraftIntro/>
+            <AboutUs/>
             <Sponsors />
         </Flex>
     )
