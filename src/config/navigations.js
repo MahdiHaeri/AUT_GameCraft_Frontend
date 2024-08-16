@@ -25,4 +25,8 @@ export const NAVIGATIONS = [
         name: 'Sponsor',
         route: ROUTES.SPONSOR,
     },
+    {
+        name: 'Dashboard',
+        route: ROUTES.DASHBOARD,
+    },
 ]

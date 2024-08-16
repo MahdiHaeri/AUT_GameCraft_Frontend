@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createBrowserRouter, Navigate} from "react-router-dom";
 import {MainPage} from "../pages/MainPage/MainPage.jsx";
 import ROUTES from "../config/routes.js";
 import {LoginPage} from "../pages/LoginPage/LoginPage.jsx";
@@ -22,9 +22,19 @@ const router = createBrowserRouter([
             {path: ROUTES.STAFFS, element: <StaffView/>},
         ]
     },
+    {
+        path: ROUTES.DASHBOARD,
+        element: <DashboardPage/>,
+        children: [
+            {index: true, element: <Navigate to={ROUTES.EVENTS} replace={true}/>},
+            {path: ROUTES.EVENTS, element: <div> Events </div>},
+            {path: ROUTES.TEAM_STATUS, element: <div> Team Status </div>},
+            {path: ROUTES.SHOPPING_BAG, element: <div> Shopping Bag </div>},
+            {path: ROUTES.GAMES, element: <div> Games </div>},
+        ]
+    },
     {path: ROUTES.LOGIN, element: <LoginPage/>},
     {path: ROUTES.SIGNUP, element: <SignUpPage/>},
-    {path: ROUTES.DASHBOARD, element: <DashboardPage/>},
     {path: '*', element: <NotFoundPage/>},
 ]);
 
