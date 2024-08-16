@@ -42,7 +42,7 @@ export function LoginForm() {
                 <Input.Password placeholder={"Password"} size={"large"} variant={'filled'}/>
 
                 <Flex align={"center"} justify={"start"} style={{width: '100%'}}>
-                    <NavLink to={"/forgot-password"} style={{fontSize: 'small'}}>Forgot Password?</NavLink>
+                    <NavLink to={"/forgot-password"} replace={true} style={{fontSize: 'small'}}>Forgot Password?</NavLink>
                 </Flex>
             </Flex>
             <Flex
@@ -53,8 +53,9 @@ export function LoginForm() {
                 gap={"small"}
             >
                 <Button type={"primary"} size={"large"} style={{width: '100%'}}>Login</Button>
-                <Typography.Text type={'secondary'}> Don't have an account? <NavLink
-                    to={ROUTES.SIGNUP}>Register</NavLink></Typography.Text>
+                <Typography.Text type={'secondary'}>
+                    Don't have an account? <NavLink to={ROUTES.SIGNUP} replace={true}>Register</NavLink>
+                </Typography.Text>
             </Flex>
         </Flex>
     )

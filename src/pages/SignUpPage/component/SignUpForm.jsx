@@ -50,8 +50,10 @@ export function SignUpForm() {
                 gap={"small"}
             >
                 <Button type={"primary"} size={"large"} style={{width: '100%'}}>Register</Button>
-                <Typography.Text type={'secondary'}>Already have an account? <NavLink
-                    to={ROUTES.LOGIN}>Login</NavLink></Typography.Text>
+                <Typography.Text type={'secondary'}>
+                    Already have an account?
+                    <NavLink to={ROUTES.LOGIN} replace={true}>Login</NavLink>
+                </Typography.Text>
             </Flex>
         </Flex>
     )

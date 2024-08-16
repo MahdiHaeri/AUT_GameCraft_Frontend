@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import logo from '/src/assets/svg/dark-3d.svg';
 import {useLocation, useNavigate} from "react-router";
 import ROUTES from "../../config/routes.js";
-import {NAVIGATIONS} from "../../config/navigations.js";
+import {MainNavigations} from "../../config/mainNavigations.js";
 
 
 const {useToken} = theme
@@ -58,7 +58,7 @@ export function AppHeader() {
                     />
 
                     <Space size={"small"}>
-                        {NAVIGATIONS.map(item => (
+                        {MainNavigations.map(item => (
                             <Button
                                 key={item.route}
                                 type={"primary"}

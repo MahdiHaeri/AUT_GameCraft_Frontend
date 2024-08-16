@@ -1,8 +1,115 @@
-export function DashboardLayout({children}) {
+import {Button, Col, Flex, Image, Row, theme, Typography} from "antd";
+import backgroundPattern from "/src/assets/svg/pattern.svg";
+import logo from '/src/assets/svg/dark-3d.svg'
+import {Outlet, replace, useNavigate} from "react-router";
+import {DashboardNavigations} from "../../config/DashboardNavigations.js";
+import userImage from '/src/assets/svg/avatar-1.svg'
+
+const {useToken} = theme
+
+export function DashboardLayout() {
+    const {token} = useToken()
+    const navigate = useNavigate()
+
     return (
-        <>
-            <h1>hello</h1>
-            {children}
-        </>
+        <Flex
+            align={"center"}
+            justify={"start"}
+            vertical
+            style={{
+                width: '100%',
+                backgroundColor: token.colorPrimary,
+                backgroundImage: `url(${backgroundPattern})`,
+                padding: '1rem',
+            }}
+            gap={"large"}
+        >
+            <Flex align={"center"} justify={"center"} style={{width: '100%'}}>
+                <img src={logo} alt={'logo'} width={'100px'} height={'100px'}/>
+            </Flex>
+            <Flex align={"center"} justify={"center"} style={{width: '100%'}}>
+                <Row align={"top"} justify={"center"} style={{width: '100%'}} gutter={[16, 16]}>
+                    <Col span={24} lg={8}>
+                        <Flex
+                            vertical
+                            align={"center"}
+                            justify={"center"}
+                            style={{
+                                backgroundColor: token.colorBgBase,
+                                width: '100%',
+                                borderRadius: token.borderRadius,
+                                padding: token.padding
+                            }}
+                        >
+                            <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"small"}>
+                                <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"small"}>
+                                    <Flex
+                                        style={{
+                                            width: '30%',
+                                            borderRadius: '50%',
+                                            overflow: "hidden",
+                                            aspectRatio: '1/1',
+                                        }}
+                                    >
+                                        <Image
+                                            src={"https://xsgames.co/randomusers/avatar.php?g=female"}
+                                            width={'100%'}
+                                            height={'auto'}
+                                            placeholder={
+                                                <img src={userImage} alt={'user-image'} width={'100%'} height={'auto'}/>
+                                            }
+                                        />
+                                    </Flex>
+                                    <Typography.Title level={4}> Mahdi Haeri</Typography.Title>
+
+                                </Flex>
+                                <Flex
+                                    vertical
+                                    align={"center"}
+                                    justify={"center"}
+                                    style={{width: '100%'}}
+                                    gap={"small"}
+                                >
+                                    {DashboardNavigations.map(item => (
+                                        <Button
+                                            key={item.route}
+                                            type={"dashed"}
+                                            size={"large"}
+                                            style={{width: '100%'}}
+                                            onClick={() => navigate(item.route, {replace: true})}
+                                        >
+                                            {item.name}
+                                        </Button>
+                                    ))}
+                                    <Button
+                                        danger
+                                        type={"dashed"}
+                                        size={"large"}
+                                        style={{width: '100%'}}
+                                    >
+                                        Logout
+                                    </Button>
+                                </Flex>
+                            </Flex>
+                        </Flex>
+                    </Col>
+                    <Col span={24} lg={16}>
+                        <Flex
+                            vertical
+                            align={"center"}
+                            justify={"center"}
+                            style={{
+                                backgroundColor: token.colorBgBase,
+                                width: '100%',
+                                borderRadius: token.borderRadius,
+                                padding: token.padding
+                            }}
+                        >
+                            <Outlet/>
+                        </Flex>
+                    </Col>
+                </Row>
+            </Flex>
+        </Flex>
     )
 }

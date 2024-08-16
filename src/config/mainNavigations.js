@@ -1,6 +1,6 @@
 import ROUTES from "./routes.js";
 
-export const NAVIGATIONS = [
+export const MainNavigations = [
     {
         name: 'Home',
         route: ROUTES.HOME,
