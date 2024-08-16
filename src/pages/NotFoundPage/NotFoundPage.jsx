@@ -4,17 +4,19 @@ import sadLogo from '/src/assets/svg/sad-craft.svg'
 import backgroundPattern from '/src/assets/svg/pattern.svg'
 import {theme} from "antd";
 import {useNavigate} from "react-router";
+import {useTranslation} from "react-i18next";
 
 const {useToken} = theme
 
 export function NotFoundPage() {
     const {token} = useToken()
     const navigate = useNavigate()
+    const {t} = useTranslation()
 
     return (
         <>
             <Helmet>
-                <title> 404 Page Not Found </title>
+                <title> {t('app.pages.notFound')} </title>
             </Helmet>
             <Flex style={{width: '100vw', height: '100vh'}}>
                 <Flex

@@ -9,6 +9,14 @@
       "sponsors": "Sponsors",
       "dashboard": "Dashboard"
     },
+    "pages": {
+      "main": "Game Craft",
+      "home": "Home",
+      "dashboard": "Dashboard",
+      "notFound": "Not Found",
+      "login": "Login",
+      "signUp": "SignUp"
+    },
     "auth": {
       "login": "Login",
       "signUp": "Signup",

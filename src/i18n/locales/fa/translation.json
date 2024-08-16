@@ -9,6 +9,14 @@
       "sponsors": "حامیان",
       "dashboard": "داشبورد"
     },
+    "pages": {
+      "main": "گیم‌کرفت",
+      "home": "خانه",
+      "dashboard": "داشبورد",
+      "notFound": "یافت نشد",
+      "login": "ورود",
+      "signUp": "ثبت نام"
+    },
     "auth": {
       "login": "ورود",
       "signUp": "ثبت نام",

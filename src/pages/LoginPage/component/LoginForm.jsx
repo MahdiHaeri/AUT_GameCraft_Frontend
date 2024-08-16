@@ -64,7 +64,7 @@ export function LoginForm() {
                         {t('app.auth.doNotHaveAccount')}
                     </Typography.Text>
                     <NavLink to={ROUTES.SIGNUP} replace={true}>
-                        {t('app.auth.signup')}
+                        {t('app.auth.signUp')}
                     </NavLink>
                 </Flex>
             </Flex>

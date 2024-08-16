@@ -18,7 +18,7 @@ export function LoginPage() {
     return (
         <>
             <Helmet>
-                <title> Login </title>
+                <title> {t('app.pages.login')}</title>
             </Helmet>
 
             <Flex style={{width: '100vw', height: '100vh'}}>
