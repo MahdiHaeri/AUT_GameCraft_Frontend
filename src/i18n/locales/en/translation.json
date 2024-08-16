@@ -65,7 +65,8 @@
     "teamStatus": "Team Status",
     "games": "Games",
     "shoppingBag": "Shopping Bag",
-    "staffs": "Staffs"
+    "staffs": "Staffs",
+    "backToHome": "Back to Home"
   },
   "error": {
     "404": "page not found",

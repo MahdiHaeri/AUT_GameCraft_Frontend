@@ -33,7 +33,9 @@ export function NotFoundPage() {
                     gap={"large"}
                 >
                     <img src={sadLogo} alt={"404"} style={{height: 'auto', width: 'auto'}}/>
-                    <Typography.Title type={"danger"}> 404 Page Not Found </Typography.Title>
+                    <Typography.Title type={"danger"}>
+                        {t('error.404')}
+                    </Typography.Title>
                     <Button
                         type={'primary'}
                         size={"large"}
@@ -46,7 +48,7 @@ export function NotFoundPage() {
                         }}
                         onClick={() => navigate('/', {replace: true})}
                     >
-                        Back to Home
+                        {t('button.backToHome')}
                     </Button>
                 </Flex>
             </Flex>
