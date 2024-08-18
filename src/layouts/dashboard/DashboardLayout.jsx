@@ -1,9 +1,10 @@
 import {Button, Col, Flex, Image, Row, theme, Typography} from "antd";
 import backgroundPattern from "/src/assets/svg/pattern.svg";
 import logo from '/src/assets/svg/dark-3d.svg'
-import {Outlet, replace, useNavigate} from "react-router";
+import {Outlet, useNavigate} from "react-router";
 import {DashboardNavigations} from "../../config/DashboardNavigations.js";
 import userImage from '/src/assets/svg/avatar-1.svg'
+import Constants from "/src/config/Constants.js";
 
 const {useToken} = theme
 
@@ -52,7 +53,7 @@ export function DashboardLayout() {
                                         }}
                                     >
                                         <Image
-                                            src={"https://xsgames.co/randomusers/avatar.php?g=female"}
+                                            src={Constants.avatarUrl}
                                             width={'100%'}
                                             height={'auto'}
                                             placeholder={

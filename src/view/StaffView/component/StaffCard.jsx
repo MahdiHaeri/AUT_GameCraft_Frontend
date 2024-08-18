@@ -5,6 +5,7 @@ import {
     XOutlined,
     YoutubeFilled
 } from "@ant-design/icons";
+import Constants from "/src/config/Constants.js";
 
 const {useToken} = theme
 
@@ -31,7 +32,7 @@ export function StaffCard() {
             <Avatar
                 size={140}
                 icon={<UserOutlined/>}
-                src={'https://xsgames.co/randomusers/avatar.php?g=female'}
+                src={Constants.avatarUrl}
             />
             <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}}>
                 <Typography.Title level={4} style={{margin: 0, fontWeight: 'bolder', color: token.colorPrimary}}>Staff Name</Typography.Title>
