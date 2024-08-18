@@ -8,7 +8,7 @@ const customTheme = {
     algorithm: theme.defaultAlgorithm,
     token: {
 
-        // fontFamily: "SF-Pro-Rounded",
+        fontFamily: "Estedad-bold",
         borderRadius: 16,
         colorPrimary: "#3c3a7d",
         colorInfo: "#3c3a7d",
