@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import logo from '/src/assets/svg/dark-3d.svg';
 import {useLocation, useNavigate} from "react-router";
 import ROUTES from "../../config/routes.js";
-import {useMainNavigations} from "../../config/mainNavigations.jsx";
+import {useMainNavigations} from "../../config/MainNavigations.jsx";
 import {useTranslation} from "react-i18next";
 
 

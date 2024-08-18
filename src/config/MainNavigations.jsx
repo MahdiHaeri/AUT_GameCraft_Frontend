@@ -2,7 +2,7 @@ import ROUTES from "./routes.js";
 import {useTranslation} from "react-i18next";
 
 export const useMainNavigations = () => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
 
     return [
         {

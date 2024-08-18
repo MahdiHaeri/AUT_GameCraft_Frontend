@@ -9,6 +9,12 @@
       "sponsors": "Sponsors",
       "dashboard": "Dashboard"
     },
+    "dashboard": {
+      "event": "Event",
+      "teamStatus": "Team Status",
+      "games": "Games",
+      "shoppingBag": "Shopping Bag"
+    },
     "pages": {
       "main": "Game Craft",
       "home": "Home",
@@ -20,6 +26,7 @@
     "auth": {
       "login": "Login",
       "signUp": "Signup",
+      "logout": "Logout",
       "register": "Register",
       "email": "Email",
       "password": "Password",

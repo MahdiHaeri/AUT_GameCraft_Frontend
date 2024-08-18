@@ -9,6 +9,12 @@
       "sponsors": "حامیان",
       "dashboard": "داشبورد"
     },
+    "dashboard": {
+      "event": "رویداد",
+      "teamStatus": "وضعیت تیم",
+      "games": "بازی‌ها",
+      "shoppingBag": "سبد خرید"
+    },
     "pages": {
       "main": "گیم‌کرفت",
       "home": "خانه",
@@ -20,6 +26,7 @@
     "auth": {
       "login": "ورود",
       "signUp": "ثبت نام",
+      "logout": "خروج",
       "register": "ثبت نام",
       "email": "ایمیل",
       "password": "رمز عبور",

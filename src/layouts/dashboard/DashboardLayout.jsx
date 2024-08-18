@@ -2,15 +2,18 @@ import {Button, Col, Flex, Image, Row, theme, Typography} from "antd";
 import backgroundPattern from "/src/assets/svg/pattern.svg";
 import logo from '/src/assets/svg/dark-3d.svg'
 import {Outlet, useNavigate} from "react-router";
-import {DashboardNavigations} from "../../config/DashboardNavigations.js";
+import {useDashboardNavigations} from "../../config/DashboardNavigations.jsx";
 import userImage from '/src/assets/svg/avatar-1.svg'
 import Constants from "/src/config/Constants.js";
+import {useTranslation} from "react-i18next";
 
 const {useToken} = theme
 
 export function DashboardLayout() {
     const {token} = useToken()
     const navigate = useNavigate()
+    const dashboardNavigations = useDashboardNavigations()
+    const {t} = useTranslation()
 
     return (
         <Flex
@@ -71,7 +74,7 @@ export function DashboardLayout() {
                                     style={{width: '100%'}}
                                     gap={"small"}
                                 >
-                                    {DashboardNavigations.map(item => (
+                                    {dashboardNavigations.map(item => (
                                         <Button
                                             key={item.route}
                                             type={"dashed"}
@@ -88,7 +91,7 @@ export function DashboardLayout() {
                                         size={"large"}
                                         style={{width: '100%'}}
                                     >
-                                        Logout
+                                        {t('app.auth.logout')}
                                     </Button>
                                 </Flex>
                             </Flex>
