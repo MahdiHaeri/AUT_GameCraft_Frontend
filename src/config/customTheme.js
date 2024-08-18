@@ -23,7 +23,7 @@ const customTheme = {
             tailWidth: 10,
         },
         Switch: {
-            colorPrimary: 'darkgreen',
+            colorPrimary: '#fff3',
         },
     },
 }
