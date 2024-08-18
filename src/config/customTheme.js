@@ -7,7 +7,6 @@ import '/src/assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css'
 const customTheme = {
     algorithm: theme.defaultAlgorithm,
     token: {
-
         fontFamily: "Estedad-bold",
         borderRadius: 16,
         colorPrimary: "#3c3a7d",

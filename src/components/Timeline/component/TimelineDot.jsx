@@ -9,21 +9,29 @@ export function TimelineDot() {
             style={{
                 width: '5vw',
                 aspectRatio: 1,
-                borderRadius: '50%',
-                backgroundColor: 'darkgreen',
-                overflow: "hidden"
-            }}>
+            }}
+        >
             <Flex
                 align={"center"}
                 justify={"center"}
                 style={{
-                    width: '80%',
-                    aspectRatio: 1,
+                    width: '100%',
+                    height: '100%',
                     borderRadius: '50%',
-                    backgroundColor: 'white',
-                    overflow: "hidden"
+                    backgroundColor: 'darkgreen',
                 }}>
-                <Avatar src={dotLogo} shape={"square"} style={{width: '80%', height: '80%'}}/>
+                <Flex
+                    align={"center"}
+                    justify={"center"}
+                    style={{
+                        width: '80%',
+                        aspectRatio: 1,
+                        borderRadius: '50%',
+                        backgroundColor: 'white',
+                        overflow: "hidden"
+                    }}>
+                    <Avatar src={dotLogo} shape={"square"} style={{width: '80%', height: '80%'}}/>
+                </Flex>
             </Flex>
         </Flex>
     )

@@ -7,9 +7,10 @@ import {useTranslation} from "react-i18next";
 
 function App() {
     const {t, i18n} = useTranslation()
-    document.body.dir = i18n.dir()
+    const direction = i18n.dir()
+    document.body.dir = direction
     return (
-        <ConfigProvider theme={customTheme}>
+        <ConfigProvider theme={customTheme} direction={direction}>
             <RouterProvider router={router}/>
         </ConfigProvider>
     )

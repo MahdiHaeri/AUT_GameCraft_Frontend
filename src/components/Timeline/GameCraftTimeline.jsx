@@ -1,4 +1,4 @@
-import {Avatar, Flex, theme, Timeline, Typography} from "antd";
+import {Flex, theme, Timeline} from "antd";
 import timelineImage1 from '/src/assets/svg/timline-1.svg'
 import timelineImage2 from '/src/assets/svg/timline-2.svg'
 import timelineImage3 from '/src/assets/svg/timline-3.svg'
