@@ -22,6 +22,9 @@ const customTheme = {
             tailColor: '#01B582',
             tailWidth: 10,
         },
+        Switch: {
+            colorPrimary: 'darkgreen',
+        },
     },
 }
 

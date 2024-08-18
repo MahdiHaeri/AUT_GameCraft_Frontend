@@ -1,10 +1,11 @@
-import {Button, Divider, Flex, Layout, Space, theme} from "antd";
+import {Button, Divider, Flex, Layout, Space, Switch, theme} from "antd";
 import {useEffect, useState} from "react";
 import logo from '/src/assets/svg/dark-3d.svg';
 import {useLocation, useNavigate} from "react-router";
 import ROUTES from "../../config/routes.js";
 import {useMainNavigations} from "../../config/MainNavigations.jsx";
 import {useTranslation} from "react-i18next";
+import {SwapOutlined} from "@ant-design/icons";
 
 
 const {useToken} = theme
@@ -16,7 +17,7 @@ export function AppHeader() {
     const navigate = useNavigate()
     const location = useLocation(); // Get the current location
     const {token} = useToken();
-    const {t} = useTranslation()
+    const {t, i18n} = useTranslation()
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -78,6 +79,17 @@ export function AppHeader() {
                 </Flex>
 
                 <Flex align={"center"} justify={"center"} style={{height: '100%'}} gap={"small"}>
+                    <Switch
+                        checkedChildren={"En"}
+                        unCheckedChildren={"Fa"}
+                        checked={i18n.language !== 'fa'}
+                        defaultChecked
+                        size={'default'}
+                        onClick={() => {
+                            i18n.changeLanguage(i18n.language === 'fa' ? 'en' : 'fa')
+                            //sleep 1 second
+                        }}
+                    />
                     <Divider type={"vertical"}
                              style={{height: '50%', borderWidth: '4px', borderRadius: '8px', margin: 0}}/>
                     <Space size={"small"}>
