@@ -1,4 +1,4 @@
-import {Button, Col, Flex, Image, Row, theme, Typography} from "antd";
+import {Button, Col, Flex, Image, Layout, Row, theme, Typography} from "antd";
 import backgroundPattern from "/src/assets/svg/pattern.svg";
 import logo from '/src/assets/svg/dark-3d.svg'
 import {Outlet, useNavigate} from "react-router";
@@ -9,7 +9,7 @@ import {useTranslation} from "react-i18next";
 
 const {useToken} = theme
 
-export function DashboardLayout() {
+export function DashboardLayout({children}) {
     const {token} = useToken()
     const navigate = useNavigate()
     const dashboardNavigations = useDashboardNavigations()
@@ -109,7 +109,9 @@ export function DashboardLayout() {
                                 padding: token.padding
                             }}
                         >
-                            <Outlet/>
+                            <Layout.Content>
+                                {children}
+                            </Layout.Content>
                         </Flex>
                     </Col>
                 </Row>

@@ -4,6 +4,7 @@ import {Outlet} from "react-router";
 import {Helmet} from "react-helmet-async";
 import {AppFooter} from "../../components/footer/AppFooter.jsx";
 import {useTranslation} from "react-i18next";
+import {MainLayout} from "../../layouts/main/MainLayout.jsx";
 
 export function MainPage() {
     const {t} = useTranslation()
@@ -14,13 +15,9 @@ export function MainPage() {
             </Helmet>
 
             <Flex style={{width: '100vw', minHeight: '100vh'}}>
-                <Layout>
-                    <AppHeader/>
-                    <Layout.Content>
-                        <Outlet/>
-                    </Layout.Content>
-                    <AppFooter/>
-                </Layout>
+                <MainLayout>
+                    <Outlet/>
+                </MainLayout>
             </Flex>
         </>
     );

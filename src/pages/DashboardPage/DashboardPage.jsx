@@ -14,9 +14,7 @@ export function DashboardPage() {
 
             <Flex style={{width: '100vw', minHeight: '100vh'}}>
                 <DashboardLayout>
-                    <Layout.Content>
                         <Outlet/>
-                    </Layout.Content>
                 </DashboardLayout>
             </Flex>
         </>
