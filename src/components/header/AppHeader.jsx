@@ -5,8 +5,6 @@ import {useLocation, useNavigate} from "react-router";
 import ROUTES from "../../config/routes.js";
 import {useMainNavigations} from "../../config/MainNavigations.jsx";
 import {useTranslation} from "react-i18next";
-import {SwapOutlined} from "@ant-design/icons";
-
 
 const {useToken} = theme
 const {Header} = Layout

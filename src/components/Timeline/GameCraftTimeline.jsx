@@ -11,7 +11,7 @@ import {TimelineChildren} from "./component/TimelineChildren.jsx";
 
 const {useToken} = theme
 
-export function GameCraftTimeline() {
+export function GameCraftTimeline({padding, backgroundColor}) {
     const {token} = useToken();
 
     const items = [
@@ -52,7 +52,8 @@ export function GameCraftTimeline() {
             justify={"center"}
             style={{
                 width: '100%',
-                padding: token.padding
+                padding: padding,
+                backgroundColor: backgroundColor
             }}
         >
             <Timeline items={items} mode={'alternate'} style={{width: '100%'}}/>

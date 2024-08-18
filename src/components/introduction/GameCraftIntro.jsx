@@ -5,12 +5,20 @@ import {useTranslation} from "react-i18next";
 
 const {useToken} = theme
 
-export function GameCraftIntro() {
+export function GameCraftIntro({padding, backgroundColor}) {
     const {token} = useToken();
     const {t} = useTranslation()
 
     return (
-        <Flex align={"center"} justify={"center"} style={{width: '100%'}}>
+        <Flex
+            align={"center"}
+            justify={"center"}
+            style={{
+                width: '100%',
+                padding: padding,
+                backgroundColor: backgroundColor
+            }}
+        >
             <Row align={"middle"} justify={"space-around"} gutter={[16, 16]} style={{width: '100%'}}>
                 <Col span={24} lg={12}>
                     <Flex
@@ -20,7 +28,12 @@ export function GameCraftIntro() {
                         style={{width: '100%'}}
                         gap={"small"}
                     >
-                        <Typography.Title level={1} style={{color: token.colorAction, fontWeight: "bolder", fontSize: '5rem', marginBottom: '1rem'}}>
+                        <Typography.Title level={1} style={{
+                            color: token.colorAction,
+                            fontWeight: "bolder",
+                            fontSize: '5rem',
+                            marginBottom: '1rem'
+                        }}>
                             {t('app.intro.title')}
                         </Typography.Title>
                         <Typography.Title level={3} style={{fontWeight: "bold", margin: 0}}>

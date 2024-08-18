@@ -3,11 +3,33 @@ import firstPrizeLogo from '/src/assets/svg/prize-1.svg'
 import secondPrizeLogo from '/src/assets/svg/prize-2.svg'
 import thirdPrizeLogo from '/src/assets/svg/prize-3.svg'
 import {useTranslation} from "react-i18next";
+import bubbleImg from '/src/assets/svg/bubble-light-purple.svg'
 
-export function Prizes() {
+export function Prizes({padding, backgroundColor}) {
     const {t} = useTranslation()
     return (
-        <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}}>
+        <Flex
+            vertical
+            align={"center"}
+            justify={"center"}
+            style={{
+                width: '100%',
+                position: 'relative',
+                padding: padding,
+                backgroundColor: backgroundColor,
+            }}
+        >
+            <img
+                src={bubbleImg}
+                width={'auto'}
+                height={'100%'}
+                alt={'bubble-image'}
+                style={{
+                    position: 'absolute',
+                    right: '5vw',
+                    transform: 'scaleX(-1)'
+                }}
+            />
             <Typography.Title level={1} style={{fontWeight: 'bolder'}}>
                 {t('app.prizes.title')}
             </Typography.Title>

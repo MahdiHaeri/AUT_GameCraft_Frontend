@@ -1,9 +1,8 @@
-import {Footer} from "antd/es/layout/layout.js";
-import {Button, Divider, Flex, theme, Typography} from "antd";
+import {Button, Divider, Flex, Layout, theme, Typography} from "antd";
 import logo from '/src/assets/svg/dark-3d.svg'
 import autComputerEngineeringLogo from '/src/assets/images/logo/ssc_white.png'
 import tehranArtLogo from '/src/assets/images/logo/Asset 4.png'
-
+import {useTranslation} from "react-i18next";
 import {
     FacebookFilled,
     InstagramOutlined,
@@ -11,7 +10,6 @@ import {
     XOutlined,
     YoutubeFilled
 } from "@ant-design/icons";
-import {useTranslation} from "react-i18next";
 
 const {useToken} = theme
 
@@ -20,7 +18,7 @@ export function AppFooter() {
     const {t} = useTranslation()
 
     return (
-        <Footer
+        <Layout.Footer
             style={{
                 backgroundColor: token.colorPrimary,
                 textAlign: 'center',
@@ -75,6 +73,6 @@ export function AppFooter() {
                     {t('app.footer.copyRight')}
                 </Typography.Text>
             </Divider>
-        </Footer>
+        </Layout.Footer>
     )
 }

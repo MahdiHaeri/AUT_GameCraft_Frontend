@@ -7,10 +7,19 @@ import pgjLogo from '/src/assets/images/logo/pgj.png'
 import myketLogo from '/src/assets/images/logo/myket.png'
 import {useTranslation} from "react-i18next";
 
-export function Sponsors() {
+export function Sponsors({padding, backgroundColor}) {
     const {t} = useTranslation()
     return (
-        <Flex align={"center"} justify={"space-between"} style={{width: '100%'}} vertical>
+        <Flex
+            vertical
+            align={"center"}
+            justify={"space-between"}
+            style={{
+                width: '100%',
+                padding: padding,
+                backgroundColor: backgroundColor
+            }}
+        >
             <Typography.Title level={1} style={{fontWeight: 'bolder'}}>
                 {t('app.sponsors.title')}
             </Typography.Title>
