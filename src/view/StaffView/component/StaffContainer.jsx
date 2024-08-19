@@ -21,12 +21,12 @@ export function StaffContainer() {
             }}
         >
             <Typography.Title level={1} style={{fontWeight: "bolder", color: token.colorPrimary}}>
-                Gamecraft Team
+                People
             </Typography.Title>
-            <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"large"}>
+            <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={50}>
                 {staffs.map((team, index) => (
-                    <Flex key={index} vertical align={"center"} justify={"center"} style={{width: '100%'}}>
-                        <Typography.Title level={3}> {team.teamTitle}</Typography.Title>
+                    <Flex key={index} vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"small"}>
+                        <Typography.Title level={2} style={{color: token.colorAction, margin: 0}}> {team.teamTitle} </Typography.Title>
                         <Row
                             align={"middle"}
                             justify={"center"}
