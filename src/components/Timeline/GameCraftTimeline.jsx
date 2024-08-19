@@ -9,6 +9,7 @@ import {TimelineDot} from "./component/TimelineDot.jsx";
 import {TimelineLabel} from "./component/TimelineLabel.jsx";
 import {TimelineChildren} from "./component/TimelineChildren.jsx";
 import {useTranslation} from "react-i18next";
+import bubbleImg from '/src/assets/svg/bubble-light-purple.svg'
 
 const {useToken} = theme
 
@@ -56,10 +57,23 @@ export function GameCraftTimeline({padding, backgroundColor}) {
             style={{
                 width: '100%',
                 padding: padding,
-                backgroundColor: backgroundColor
+                backgroundColor: backgroundColor,
+                position: 'relative',
+                zIndex: '10'
             }}
             gap={"large"}
         >
+            <img
+                src={bubbleImg}
+                alt={'bubble-img'}
+                width={'auto'}
+                height={'50%'}
+                style={{
+                    position: 'absolute',
+                    zIndex: '-1',
+                    opacity: '0.5',
+                }}
+            />
             <Typography.Title style={{marginBottom: '2rem'}}>
                 {t('app.timeline.title')}
             </Typography.Title>

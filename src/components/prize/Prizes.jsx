@@ -27,7 +27,8 @@ export function Prizes({padding, backgroundColor}) {
                 style={{
                     position: 'absolute',
                     right: '5vw',
-                    transform: 'scaleX(-1)'
+                    transform: 'scaleX(-1)',
+                    opacity: '0.5',
                 }}
             />
             <Typography.Title level={1} style={{fontWeight: 'bolder'}}>
