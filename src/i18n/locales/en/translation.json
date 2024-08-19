@@ -1,5 +1,9 @@
 {
   "app": {
+    "logo": {
+      "game": "Game",
+      "craft": "Craft"
+    },
     "mainNavigation": {
       "home": "Home",
       "news": "News",

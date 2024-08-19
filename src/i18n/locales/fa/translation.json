@@ -1,5 +1,9 @@
 {
   "app": {
+    "logo": {
+      "game": "گیمـ",
+      "craft": "کرفت"
+    },
     "mainNavigation": {
       "home": "خانه",
       "news": "اخبار",

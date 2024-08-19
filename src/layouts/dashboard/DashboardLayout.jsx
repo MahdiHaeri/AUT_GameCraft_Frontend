@@ -6,6 +6,7 @@ import {useDashboardNavigations} from "../../config/DashboardNavigations.jsx";
 import userImage from '/src/assets/svg/avatar-1.svg'
 import Constants from "/src/config/Constants.js";
 import {useTranslation} from "react-i18next";
+import {LogoWithText} from "../../components/LogoWithText/LogoWithText.jsx";
 
 const {useToken} = theme
 
@@ -29,7 +30,7 @@ export function DashboardLayout({children}) {
             gap={"large"}
         >
             <Flex align={"center"} justify={"center"} style={{width: '100%'}}>
-                <img src={logo} alt={'logo'} width={'100px'} height={'100px'}/>
+                <LogoWithText />
             </Flex>
             <Flex align={"center"} justify={"center"} style={{width: '100%'}}>
                 <Row align={"top"} justify={"center"} style={{width: '100%'}} gutter={[16, 16]}>
