@@ -1,18 +1,20 @@
 import './App.css'
 import {RouterProvider} from "react-router-dom";
 import router from "./routes/index.jsx";
-import {ConfigProvider} from "antd";
-import customTheme from '/src/config/customTheme.js'
 import {useTranslation} from "react-i18next";
+import {ThemeProvider} from "./hooks/context/ThemeContext.jsx";
+import AntDesignThemeConfigProvider from "./config/AntDesignThemeConfigProvider.jsx";
 
 function App() {
     const {t, i18n} = useTranslation()
-    const direction = i18n.dir()
-    document.body.dir = direction
+
+    document.body.dir = i18n.dir()
     return (
-        <ConfigProvider theme={customTheme} direction={direction}>
-            <RouterProvider router={router}/>
-        </ConfigProvider>
+        <ThemeProvider>
+            <AntDesignThemeConfigProvider>
+                <RouterProvider router={router}/>
+            </AntDesignThemeConfigProvider>
+        </ThemeProvider>
     )
 }
 

@@ -1,10 +1,13 @@
 import {Button, Divider, Flex, Layout, Space, Switch, theme} from "antd";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import logo from '/src/assets/svg/dark-3d.svg';
 import {useLocation, useNavigate} from "react-router";
 import ROUTES from "../../config/routes.js";
 import {useMainNavigations} from "../../config/MainNavigations.jsx";
 import {useTranslation} from "react-i18next";
+import {ThemeContext} from "../../hooks/context/ThemeContext.jsx";
+import {MoonFilled, SunFilled, SunOutlined} from "@ant-design/icons";
+
 
 const {useToken} = theme
 const {Header} = Layout
@@ -16,6 +19,7 @@ export function AppHeader() {
     const location = useLocation(); // Get the current location
     const {token} = useToken();
     const {t, i18n} = useTranslation()
+    const {darkMode, toggleTheme} = useContext(ThemeContext)
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -77,15 +81,20 @@ export function AppHeader() {
                 </Flex>
 
                 <Flex align={"center"} justify={"center"} style={{height: '100%'}} gap={"small"}>
+                    <Button
+                        type={"text"}
+                        shape={"circle"}
+                        onClick={() => toggleTheme()}
+                        size={"large"}
+                        icon={darkMode ? <MoonFilled style={{color: 'white'}}/> : <SunFilled style={{color: 'white'}}/>}
+                    />
                     <Switch
                         checkedChildren={"En"}
                         unCheckedChildren={"Fa"}
                         checked={i18n.language !== 'fa'}
                         defaultChecked
-                        size={'default'}
                         onClick={() => {
                             i18n.changeLanguage(i18n.language === 'fa' ? 'en' : 'fa')
-                            //sleep 1 second
                         }}
                     />
                     <Divider type={"vertical"}

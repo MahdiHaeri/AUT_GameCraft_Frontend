@@ -46,7 +46,8 @@ export function DashboardLayout({children}) {
                             }}
                         >
                             <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"small"}>
-                                <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"small"}>
+                                <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}}
+                                      gap={"small"}>
                                     <Flex
                                         style={{
                                             width: '30%',
