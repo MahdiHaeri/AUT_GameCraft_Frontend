@@ -16,7 +16,7 @@ export function AntDesignThemeConfigProvider({children}) {
         token: {
             fontFamily: "Estedad-bold",
             borderRadius: 16,
-            colorPrimary: darkMode ? "#3c3a7d" : "#5a57b8",
+            colorPrimary: darkMode ? "#3c3a7d" : "#3c3a7d",
             colorBgBase: darkMode ? "#1E1E1E" : "#f5f5f5",
             colorInfo: "#3c3a7d",
             colorAction: "#01B582",
