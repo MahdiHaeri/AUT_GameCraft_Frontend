@@ -9,6 +9,33 @@
       "sponsors": "حامیان",
       "dashboard": "داشبورد"
     },
+    "timeline": {
+      "title": "برنامه زمانی",
+      "step1": {
+        "title": "ثبت نام",
+        "schedule": "پنج شنبه ۱۳ مهر"
+      },
+      "step2": {
+        "title": "پایان ثبت نام",
+        "schedule": "یکشنبه ۱۶ مهر"
+      },
+      "step3": {
+        "title": "شروع کارگاه ها",
+        "schedule": "۱۶ مهر"
+      },
+      "step4": {
+        "title": "پایان کارگاه ها",
+        "schedule": "جمعه ۲۸ مهر"
+      },
+      "step5": {
+        "title": "تعریف مسابقه",
+        "schedule": "آبان ماه"
+      },
+      "step6": {
+        "title": "داوری",
+        "schedule": "آذر ماه"
+      }
+    },
     "dashboard": {
       "event": "رویداد",
       "teamStatus": "وضعیت تیم",

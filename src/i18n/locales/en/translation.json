@@ -9,6 +9,33 @@
       "sponsors": "Sponsors",
       "dashboard": "Dashboard"
     },
+    "timeline": {
+      "title": "Timeline",
+      "step1": {
+        "title": "Register",
+        "schedule": "Thursday, 13th of Mehr"
+      },
+      "step2": {
+        "title": "End of Registration",
+        "schedule": "Monday, 16th of Mehr"
+      },
+      "step3": {
+        "title": "Start Workshops",
+        "schedule": "16th of Mehr"
+      },
+      "step4": {
+        "title": "End of Workshops",
+        "schedule": "Friday, 28th of Mehr"
+      },
+      "step5": {
+        "title": "Start Match",
+        "schedule": "Aban Month"
+      },
+      "step6": {
+        "title": "Judging",
+        "schedule": "Azar Month"
+      }
+    },
     "dashboard": {
       "event": "Event",
       "teamStatus": "Team Status",

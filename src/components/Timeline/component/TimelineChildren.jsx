@@ -10,10 +10,10 @@ export function TimelineChildren({title, time}) {
             gap={"small"}
         >
             <Typography.Title level={1} style={{margin: 0}}>
-                Register
+                {title}
             </Typography.Title>
             <Typography.Title level={3} style={{margin: 0}}>
-                1st of August
+                {time}
             </Typography.Title>
         </Flex>
     )
