@@ -4,7 +4,7 @@
       "home": "خانه",
       "news": "اخبار",
       "faq": "سوالات متداول",
-      "staffs": "کارکنان",
+      "staffs": "تیم ما",
       "history": "تاریخچه",
       "sponsors": "حامیان",
       "dashboard": "داشبورد"
@@ -99,7 +99,7 @@
     "teamStatus": "وضعیت تیم",
     "games": "بازی‌ها",
     "shoppingBag": "سبد خرید",
-    "staffs": "کارکنان",
+    "staffs": "تیم ما",
     "backToHome": "بازگشت به خانه"
   },
   "error": {
