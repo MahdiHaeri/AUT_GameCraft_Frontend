@@ -2,6 +2,7 @@ import {Button, Col, Flex, Row, theme, Typography} from "antd";
 import logo from '/src/assets/svg/dark-3d-bulb.svg'
 import {InstagramOutlined, XOutlined, YoutubeFilled} from "@ant-design/icons";
 import {useTranslation} from "react-i18next";
+import bubbleImg from '/src/assets/svg/bubble-purple.svg'
 
 const {useToken} = theme
 
@@ -11,12 +12,13 @@ export function GameCraftIntro({padding, backgroundColor}) {
 
     return (
         <Flex
+            vertical
             align={"center"}
             justify={"center"}
             style={{
                 width: '100%',
                 padding: padding,
-                backgroundColor: backgroundColor
+                backgroundColor: backgroundColor,
             }}
         >
             <Row align={"middle"} justify={"space-around"} gutter={[16, 16]} style={{width: '100%'}}>
@@ -25,9 +27,24 @@ export function GameCraftIntro({padding, backgroundColor}) {
                         vertical
                         align={"start"}
                         justify={"start"}
-                        style={{width: '100%'}}
+                        style={{
+                            width: '100%',
+                            position: 'relative',
+                            zIndex: 10
+                        }}
                         gap={"small"}
                     >
+                        <img
+                            src={bubbleImg}
+                            alt={'bubble-image'}
+                            height={'100%'}
+                            width={'auto'}
+                            style={{
+                                position: 'absolute',
+                                zIndex: -1,
+                                transform: 'scaleX(-1)',
+                            }}
+                        />
                         <Typography.Title level={1} style={{
                             color: token.colorAction,
                             fontWeight: "bolder",
