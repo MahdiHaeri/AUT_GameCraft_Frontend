@@ -5,6 +5,8 @@ import {AboutUs} from "../../components/aboutUs/AboutUs.jsx";
 import {Prizes} from "../../components/prize/Prizes.jsx";
 import {GameCraftTimeline} from "../../components/Timeline/GameCraftTimeline.jsx";
 import {Wave} from "../../components/wave/Wave.jsx";
+import {OnlineWorkshop} from "../../components/onlineWorkshop/OnlineWorkshop.jsx";
+import {OfflineWorkshop} from "../../components/offlineWorkshop/OfflineWorkshop.jsx";
 
 const {useToken} = theme
 const {useBreakpoint} = Grid;
@@ -27,11 +29,16 @@ export function HomeView() {
         >
             <GameCraftIntro padding={homeViewPadding} backgroundColor={token.colorPrimary}/>
             <Wave width={'100%'} height={'auto'} fill={token.colorPrimary}/>
+
             <GameCraftTimeline padding={homeViewPadding} backgroundColor={token.colorBgBase}/>
             <Prizes padding={homeViewPadding} backgroundColor={token.colorBgBase}/>
-            <Wave width={'100%'} height={'auto'} fill={token.colorPrimary} style={{transform: 'scaleY(-1) translateY(-2px)'}}/>
+
+            <Wave width={'100%'} height={'auto'} fill={'#4F7B79'} style={{transform: 'scaleY(-1) translateY(-2px)'}}/>
+            <OfflineWorkshop padding={homeViewPadding} backgroundColor={'#4F7B79'}/>
+            <OnlineWorkshop padding={homeViewPadding} backgroundColor={token.colorAction}/>
             <Sponsors padding={homeViewPadding} backgroundColor={token.colorPrimary}/>
             <Wave width={'100%'} height={'auto'} fill={token.colorPrimary}/>
+
             <AboutUs padding={homeViewPadding} backgroundColor={token.colorBgBase}/>
             <Wave width={'100%'} height={'auto'} fill={token.colorPrimary} style={{transform: 'scaleY(-1) translateY(-2px)'}}/>
         </Flex>
