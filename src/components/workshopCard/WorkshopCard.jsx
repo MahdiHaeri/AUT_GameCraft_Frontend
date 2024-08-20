@@ -34,6 +34,7 @@ export function WorkshopCard() {
             <Collapse
                 onChange={() => setIsActive(!isActive)}
                 bordered={false}
+                size={"large"}
                 style={{
                     width: '100%',
                     background: token.colorBgContainer,
