@@ -1,17 +1,28 @@
 # The Docker image that will be used to build your app
 image: node:20.16.0
-# Functions that should be executed before the build script is run
-before_script:
-  - npm i
-pages:
+
+stages:
+  - build
+  - deploy
+
+# Define the build stage
+build:
+  stage: build
   script:
+    - npm install
     - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+# Define the deploy stage
+pages:
+  stage: deploy
+  script:
     - mv ./dist ./public
   artifacts:
     paths:
-      # The folder that contains the files to be exposed at the Page URL
-      - public
+      - public/
   rules:
-    # This ensures that only pushes to the default branch will trigger
-    # a pages deploy
+    # Ensure that only pushes to the default branch trigger a deploy
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
