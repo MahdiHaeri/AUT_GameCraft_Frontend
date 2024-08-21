@@ -14,23 +14,31 @@ export function Prizes({padding, backgroundColor}) {
             justify={"center"}
             style={{
                 width: '100%',
-                position: 'relative',
                 padding: padding,
                 backgroundColor: backgroundColor,
             }}
         >
-            <img
-                src={bubbleImg}
-                width={'auto'}
-                height={'100%'}
-                alt={'bubble-image'}
+            <Flex
+                align={"center"}
+                justify={"start"}
                 style={{
+                    width: '100%',
+                    height: '100%',
                     position: 'absolute',
-                    right: '5vw',
-                    transform: 'scaleX(-1)',
-                    opacity: '0.5',
+                    padding: padding,
                 }}
-            />
+            >
+                <img
+                    src={bubbleImg}
+                    height={'100%'}
+                    width={'100%'}
+                    alt={'bubble-image'}
+                    style={{
+                        transform: 'scaleX(-1)',
+                        opacity: '0.5',
+                    }}
+                />
+            </Flex>
             <Typography.Title level={1} style={{fontWeight: 'bolder'}}>
                 {t('app.prizes.title')}
             </Typography.Title>
