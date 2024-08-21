@@ -31,6 +31,10 @@ export function AntDesignThemeConfigProvider({children}) {
             Switch: {
                 colorPrimary: '#fff3',
             },
+            Collapse: {
+                // contentPadding: 0,
+                // headerPadding: 0,
+            },
         },
     }
 
