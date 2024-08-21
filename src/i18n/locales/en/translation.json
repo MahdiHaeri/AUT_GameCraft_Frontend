@@ -1,5 +1,6 @@
 {
   "app": {
+    "name": "GameCraft",
     "logo": {
       "game": "Game",
       "craft": "Craft"

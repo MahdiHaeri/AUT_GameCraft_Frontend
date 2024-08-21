@@ -7,6 +7,7 @@ import {useMainNavigations} from "../../config/MainNavigations.jsx";
 import {useTranslation} from "react-i18next";
 import {ThemeContext} from "../../hooks/context/ThemeContext.jsx";
 import {MenuOutlined, MoonFilled, SunFilled} from "@ant-design/icons";
+import {MainDrawer} from "../mainDrawer/MainDrawer.jsx";
 
 
 const {useToken} = theme
@@ -22,6 +23,11 @@ export function AppHeader() {
     const {t, i18n} = useTranslation()
     const {darkMode, toggleTheme} = useContext(ThemeContext)
     const screens = useBreakpoint()
+    const [drawerOpen, setDrawerOpen] = useState(false)
+
+    function toggleDrawerOpen() {
+        setDrawerOpen(!drawerOpen)
+    }
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -124,12 +130,13 @@ export function AppHeader() {
                     </Flex>
                     :
                     <Flex align={"center"} justify={"space-between"} style={{height: '100%', width: '100%'}}>
-                        <Button shape={"circle"} type={"primary"}  size={"large"} icon={<MenuOutlined />} />
+                        <Button shape={"circle"} type={"primary"}  size={"large"} icon={<MenuOutlined />} onClick={() => toggleDrawerOpen()} />
                         <img
                             src={logo}
                             alt={'gamecraft-logo'}
                             style={{height: '60%', width: "auto", maxHeight: '60px'}}
                         />
+                        <MainDrawer open={drawerOpen} toggleDrawerOpen={toggleDrawerOpen}/>
                     </Flex>
             }
         </Header>
