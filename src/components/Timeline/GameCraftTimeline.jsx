@@ -63,17 +63,25 @@ export function GameCraftTimeline({padding, backgroundColor}) {
             }}
             gap={"large"}
         >
-            <img
-                src={bubbleImg}
-                alt={'bubble-img'}
-                width={'auto'}
-                height={'50%'}
+            <Flex
+                align={"center"}
+                justify={"center"}
                 style={{
+                    width: '100%',
+                    height: '100%',
                     position: 'absolute',
-                    zIndex: '-1',
-                    opacity: '0.5',
+                    padding: padding
                 }}
-            />
+            >
+                <img
+                    src={bubbleImg}
+                    alt={'bubble-img'}
+                    width={'100%'}
+                    style={{
+                        opacity: '0.5',
+                    }}
+                />
+            </Flex>
             <Typography.Title style={{marginBottom: '2rem'}}>
                 {t('app.timeline.title')}
             </Typography.Title>
