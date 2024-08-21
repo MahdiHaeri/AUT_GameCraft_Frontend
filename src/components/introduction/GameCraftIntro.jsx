@@ -34,17 +34,22 @@ export function GameCraftIntro({padding, backgroundColor}) {
                         }}
                         gap={"small"}
                     >
-                        <img
-                            src={bubbleImg}
-                            alt={'bubble-image'}
-                            height={'100%'}
-                            width={'auto'}
-                            style={{
-                                position: 'absolute',
-                                zIndex: -1,
-                                transform: 'scaleX(-1)',
-                            }}
-                        />
+                        <Flex align={"center"} justify={"center"} style={{
+                            width: '100%',
+                            height: '100%',
+                            position: "absolute",
+                            zIndex: -1,
+                        }}>
+                            <img
+                                src={bubbleImg}
+                                alt={'bubble-image'}
+                                width={'100%'}
+                                height={'100%'}
+                                style={{
+                                    transform: 'scaleX(-1)',
+                                }}
+                            />
+                        </Flex>
                         <Typography.Title level={1} style={{
                             color: token.colorAction,
                             fontWeight: "bolder",
