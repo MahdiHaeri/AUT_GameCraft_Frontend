@@ -1,4 +1,4 @@
-import {Button, Divider, Flex, Layout, Space, Switch, theme} from "antd";
+import {Button, Divider, Flex, Grid, Layout, Space, Switch, theme} from "antd";
 import {useContext, useEffect, useState} from "react";
 import logo from '/src/assets/svg/dark-3d.svg';
 import {useLocation, useNavigate} from "react-router";
@@ -6,11 +6,12 @@ import ROUTES from "../../config/routes.js";
 import {useMainNavigations} from "../../config/MainNavigations.jsx";
 import {useTranslation} from "react-i18next";
 import {ThemeContext} from "../../hooks/context/ThemeContext.jsx";
-import {MoonFilled, SunFilled, SunOutlined} from "@ant-design/icons";
+import {MenuOutlined, MoonFilled, SunFilled} from "@ant-design/icons";
 
 
 const {useToken} = theme
 const {Header} = Layout
+const {useBreakpoint} = Grid;
 
 export function AppHeader() {
     const MainNavigations = useMainNavigations()
@@ -20,6 +21,7 @@ export function AppHeader() {
     const {token} = useToken();
     const {t, i18n} = useTranslation()
     const {darkMode, toggleTheme} = useContext(ThemeContext)
+    const screens = useBreakpoint()
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -55,68 +57,81 @@ export function AppHeader() {
                 padding: '0.5rem 2rem',
             }}
         >
-            <Flex align={"center"} justify={"space-between"} style={{width: '100%', height: '100%'}}>
-                <Flex align={"center"} justify={"center"} style={{height: '100%'}} gap={"large"}>
-                    <img
-                        src={logo}
-                        alt={'gamecraft-logo'}
-                        style={{height: '80%', width: "auto", maxHeight: '60px'}}
-                    />
+            {
+                screens.lg?
+                    <Flex align={"center"} justify={"space-between"} style={{width: '100%', height: '100%'}}>
+                        <Flex align={"center"} justify={"center"} style={{height: '100%'}} gap={"large"}>
+                            <img
+                                src={logo}
+                                alt={'gamecraft-logo'}
+                                style={{height: '80%', width: "auto", maxHeight: '60px'}}
+                            />
 
-                    <Space size={"small"}>
-                        {MainNavigations.map(item => (
+                            <Space size={"small"}>
+                                {MainNavigations.map(item => (
+                                    <Button
+                                        key={item.route}
+                                        type={"primary"}
+                                        onClick={() => navigate(item.route)}
+                                        style={{
+                                            fontWeight: "bolder",
+                                            ...(isActive(item.route) ? {color: token.colorAction} : {})
+                                        }}
+                                    >
+                                        {item.name}
+                                    </Button>
+                                ))}
+                            </Space>
+                        </Flex>
+
+                        <Flex align={"center"} justify={"center"} style={{height: '100%'}} gap={"small"}>
                             <Button
-                                key={item.route}
-                                type={"primary"}
-                                onClick={() => navigate(item.route)}
-                                style={{
-                                    fontWeight: "bolder",
-                                    ...(isActive(item.route) ? {color: token.colorAction} : {})
+                                type={"text"}
+                                shape={"circle"}
+                                onClick={() => toggleTheme()}
+                                size={"large"}
+                                icon={darkMode ? <MoonFilled style={{color: 'white'}}/> :
+                                    <SunFilled style={{color: 'white'}}/>}
+                            />
+                            <Switch
+                                checkedChildren={"En"}
+                                unCheckedChildren={"Fa"}
+                                checked={i18n.language !== 'fa'}
+                                defaultChecked
+                                onClick={() => {
+                                    i18n.changeLanguage(i18n.language === 'fa' ? 'en' : 'fa')
                                 }}
-                            >
-                                {item.name}
-                            </Button>
-                        ))}
-                    </Space>
-                </Flex>
-
-                <Flex align={"center"} justify={"center"} style={{height: '100%'}} gap={"small"}>
-                    <Button
-                        type={"text"}
-                        shape={"circle"}
-                        onClick={() => toggleTheme()}
-                        size={"large"}
-                        icon={darkMode ? <MoonFilled style={{color: 'white'}}/> : <SunFilled style={{color: 'white'}}/>}
-                    />
-                    <Switch
-                        checkedChildren={"En"}
-                        unCheckedChildren={"Fa"}
-                        checked={i18n.language !== 'fa'}
-                        defaultChecked
-                        onClick={() => {
-                            i18n.changeLanguage(i18n.language === 'fa' ? 'en' : 'fa')
-                        }}
-                    />
-                    <Divider type={"vertical"}
-                             style={{height: '50%', borderWidth: '4px', borderRadius: '8px', margin: 0}}/>
-                    <Space size={"small"}>
-                        <Button
-                            type={"primary"}
-                            style={{fontWeight: "bolder"}}
-                            onClick={() => navigate(ROUTES.SIGNUP)}
-                        >
-                            {t('app.auth.signUp')}
-                        </Button>
-                        <Button
-                            type={"primary"}
-                            style={{fontWeight: "bolder"}}
-                            onClick={() => navigate(ROUTES.LOGIN)}
-                        >
-                            {t('app.auth.login')}
-                        </Button>
-                    </Space>
-                </Flex>
-            </Flex>
+                            />
+                            <Divider type={"vertical"}
+                                     style={{height: '50%', borderWidth: '4px', borderRadius: '8px', margin: 0}}/>
+                            <Space size={"small"}>
+                                <Button
+                                    type={"primary"}
+                                    style={{fontWeight: "bolder"}}
+                                    onClick={() => navigate(ROUTES.SIGNUP)}
+                                >
+                                    {t('app.auth.signUp')}
+                                </Button>
+                                <Button
+                                    type={"primary"}
+                                    style={{fontWeight: "bolder"}}
+                                    onClick={() => navigate(ROUTES.LOGIN)}
+                                >
+                                    {t('app.auth.login')}
+                                </Button>
+                            </Space>
+                        </Flex>
+                    </Flex>
+                    :
+                    <Flex align={"center"} justify={"space-between"} style={{height: '100%', width: '100%'}}>
+                        <Button shape={"circle"} type={"primary"}  size={"large"} icon={<MenuOutlined />} />
+                        <img
+                            src={logo}
+                            alt={'gamecraft-logo'}
+                            style={{height: '60%', width: "auto", maxHeight: '60px'}}
+                        />
+                    </Flex>
+            }
         </Header>
     )
 }
