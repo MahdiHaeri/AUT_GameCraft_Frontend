@@ -25,8 +25,6 @@ export function OnlineWorkshop({padding, backgroundColor}) {
                 style={{
                     width: '100%',
                     padding: padding,
-                    paddingTop: '3rem',
-                    paddingBottom: '3rem',
                 }}
                 gap={"large"}
             >

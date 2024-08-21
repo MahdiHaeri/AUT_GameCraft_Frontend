@@ -14,7 +14,7 @@ const {useBreakpoint} = Grid;
 export function HomeView() {
     const {token} = useToken()
     const screens = useBreakpoint();
-    const homeViewPadding = screens.lg ? '0 5rem' : '0 3rem'
+    const homeViewPadding = screens.lg ? '3rem 5rem' : '3rem 3rem'
     // padding: screens.xl ? '3rem 8rem' : screens.lg ? '3rem 6rem' : screens.md ? '3rem 4rem' : '3rem 2rem',
 
     return (
