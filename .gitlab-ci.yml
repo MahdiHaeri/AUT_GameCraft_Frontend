@@ -6,10 +6,11 @@ before_script:
 pages:
   script:
     - npm run build
+    - mv ./dist ./public
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
-      - dist
+      - public
   rules:
     # This ensures that only pushes to the default branch will trigger
     # a pages deploy
