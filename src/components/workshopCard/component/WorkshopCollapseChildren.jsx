@@ -58,6 +58,25 @@ export function WorkshopCollapseChildren() {
                             }
                         }/>
                     </Col>
+                    <Col span={24} sm={12} md={8} lg={6} xxl={4}>
+                        <StaffCard staff={
+                            {
+                                imageUrl: 'https://avatar.iran.liara.run/public/1',
+                                name: 'John Doe',
+                                role: 'Project Manager'
+                            }
+                        }/>
+                    </Col>
+                    <Col span={24} sm={12} md={8} lg={6} xxl={4}>
+                        <StaffCard staff={
+                            {
+                                imageUrl: 'https://avatar.iran.liara.run/public/1',
+                                name: 'John Doe',
+                                role: 'Project Manager'
+                            }
+                        }/>
+                    </Col>
+
                 </Row>
             </Flex>
         </Flex>
