@@ -18,7 +18,7 @@ export function StaffCard({staff}) {
             justify={"center"}
             vertical
             style={{
-                width: '400px',
+                width: '100%',
                 height: '300px',
                 backgroundColor: 'white',
                 boxShadow: '0 0 10px rgba(0,0,0,0.1)',
@@ -45,7 +45,7 @@ export function StaffCard({staff}) {
                 justify={"space-around"}
                 align={"center"}
                 style={{
-                    width: '50%',
+                    width: '100%',
                     padding: token.padding,
                 }}
             >

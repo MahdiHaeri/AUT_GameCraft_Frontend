@@ -17,7 +17,7 @@ export function StaffContainer() {
                 width: '100%',
                 backgroundColor: token.colorBgBase,
                 borderRadius: token.borderRadius,
-                padding: '3rem 3rem',
+                padding: '3rem 1rem',
             }}
         >
             <Typography.Title level={1} style={{fontWeight: "bolder", color: token.colorPrimary}}>
@@ -36,7 +36,7 @@ export function StaffContainer() {
                             }}
                         >
                             {team.teamMembers.map((staff, index) => (
-                                <Col key={index}>
+                                <Col key={index} span={24} sm={12} md={8} lg={6} xxl={4}>
                                     <StaffCard staff={staff}/>
                                 </Col>
                             ))}
