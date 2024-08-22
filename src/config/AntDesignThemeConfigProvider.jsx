@@ -29,7 +29,7 @@ export function AntDesignThemeConfigProvider({children}) {
                 tailWidth: 10,
             },
             Switch: {
-                colorPrimary: '#fff3',
+                // colorPrimary: '#fff3',
             },
             Collapse: {
                 // contentPadding: 0,
