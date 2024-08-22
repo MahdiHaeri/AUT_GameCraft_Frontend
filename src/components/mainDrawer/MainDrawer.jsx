@@ -1,7 +1,11 @@
-import {Button, Drawer, Flex, theme} from "antd";
+import {Button, Drawer, Flex, Switch, theme} from "antd";
 import {useTranslation} from "react-i18next";
 import {useMainNavigations} from "../../config/MainNavigations.jsx";
 import {useLocation, useNavigate} from "react-router";
+import ROUTES from "../../config/routes.js";
+import {MoonFilled, SunFilled} from "@ant-design/icons";
+import {useContext} from "react";
+import {ThemeContext} from "../../hooks/context/ThemeContext.jsx";
 
 const {useToken} = theme
 
@@ -11,6 +15,8 @@ export function MainDrawer({open, toggleDrawerOpen}) {
     const navigate = useNavigate()
     const location = useLocation(); // Get the current location
     const {token} = useToken();
+    const {darkMode, toggleTheme} = useContext(ThemeContext)
+
 
     const isActive = (path) => location.pathname === path;
 
@@ -31,7 +37,6 @@ export function MainDrawer({open, toggleDrawerOpen}) {
             style={{
                 backgroundColor: `${token.colorBgBase}`,
                 backdropFilter: 'blur(10px)',
-
             }}
         >
             <Flex
@@ -52,10 +57,36 @@ export function MainDrawer({open, toggleDrawerOpen}) {
                         width: '100%',
                     }}
                 >
+                    <Flex
+                        align={"center"}
+                        justify={"space-around"}
+                        gap={"small"}
+                        style={{
+                            width: '100%'
+                        }}
+                    >
+                        <Button
+                            type={"text"}
+                            shape={"circle"}
+                            onClick={() => toggleTheme()}
+                            size={"large"}
+                            icon={darkMode ? <MoonFilled/> :
+                                <SunFilled/>}
+                        />
+                        <Switch
+                            checkedChildren={"En"}
+                            unCheckedChildren={"Fa"}
+                            checked={i18n.language !== 'fa'}
+                            defaultChecked
+                            onClick={() => {
+                                i18n.changeLanguage(i18n.language === 'fa' ? 'en' : 'fa')
+                            }}
+                        />
+                    </Flex>
                     {MainNavigations.map(item => (
                         <Button
                             key={item.route}
-                            type={"dashed"}
+                            type={"default"}
                             onClick={() => {
                                 toggleDrawerOpen()
                                 navigate(item.route)
@@ -69,6 +100,35 @@ export function MainDrawer({open, toggleDrawerOpen}) {
                             {item.name}
                         </Button>
                     ))}
+                    <Flex
+                        align={"center"}
+                        justify={"center"}
+                        gap={"small"}
+                        style={{
+                            width: '100%'
+                        }}
+                    >
+                        <Button
+                            style={{flex: 1}}
+                            type={'default'}
+                            onClick={() => {
+                                toggleDrawerOpen()
+                                navigate(ROUTES.LOGIN)
+                            }}
+                        >
+                            {t('app.auth.login')}
+                        </Button>
+                        <Button
+                            style={{flex: 1}}
+                            type={'primary'}
+                            onClick={() => {
+                                toggleDrawerOpen()
+                                navigate(ROUTES.SIGNUP)
+                            }}
+                        >
+                            {t('app.auth.signUp')}
+                        </Button>
+                    </Flex>
                 </Flex>
             </Flex>
         </Drawer>
