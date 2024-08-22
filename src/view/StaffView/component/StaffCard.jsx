@@ -49,9 +49,9 @@ export function StaffCard({staff}) {
                     padding: token.padding,
                 }}
             >
-                <Button shape={'circle'} style={{color: 'purple'}} icon={<InstagramOutlined/>}></Button>
-                <Button shape={'circle'} style={{color: 'black'}} icon={<XOutlined/>}></Button>
-                <Button shape={'circle'} style={{color: 'red'}} icon={<YoutubeFilled/>}></Button>
+                <Button type={"text"} shape={'circle'} icon={<InstagramOutlined/>}></Button>
+                <Button type={"text"} shape={'circle'} icon={<XOutlined/>}></Button>
+                <Button type={"text"} shape={'circle'} icon={<YoutubeFilled/>}></Button>
             </Flex>
         </Flex>
     )
