@@ -9,7 +9,7 @@ const {useBreakpoint} = Grid;
 export function SponsorsView() {
     const {token} = useToken()
     const screens = useBreakpoint();
-    const blogViewPadding = screens.lg ? '3rem 5rem' : '3rem 3rem'
+    const sponsorsViewPadding = screens.lg ? '3rem 5rem' : '3rem 2rem'
     const {t} = useTranslation()
 
     return (
@@ -30,7 +30,7 @@ export function SponsorsView() {
                 justify={"center"}
                 style={{
                     width: '100%',
-                    padding: blogViewPadding
+                    padding: sponsorsViewPadding
                 }}
             >
                 <Typography.Title style={{color: 'white'}}>

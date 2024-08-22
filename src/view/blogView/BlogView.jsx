@@ -9,7 +9,7 @@ const {useBreakpoint} = Grid;
 export function BlogView() {
     const {token} = useToken()
     const screens = useBreakpoint();
-    const blogViewPadding = screens.lg ? '3rem 5rem' : '3rem 3rem'
+    const blogViewPadding = screens.lg ? '3rem 5rem' : '3rem 2rem'
     const {t} = useTranslation()
 
     return (

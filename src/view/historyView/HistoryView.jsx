@@ -9,7 +9,7 @@ const {useBreakpoint} = Grid;
 export function HistoryView() {
     const {token} = useToken()
     const screens = useBreakpoint();
-    const blogViewPadding = screens.lg ? '3rem 5rem' : '3rem 3rem'
+    const historyViewPadding = screens.lg ? '3rem 5rem' : '3rem 2rem'
     const {t} = useTranslation()
 
     return (
@@ -30,7 +30,7 @@ export function HistoryView() {
                 justify={"center"}
                 style={{
                     width: '100%',
-                    padding: blogViewPadding
+                    padding: historyViewPadding
                 }}
             >
                 <Typography.Title style={{color: 'white'}}>
