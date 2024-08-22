@@ -20,7 +20,7 @@ export function StaffCard({staff}) {
             style={{
                 width: '100%',
                 height: '300px',
-                backgroundColor: 'white',
+                backgroundColor: token.colorFillAlter,
                 boxShadow: '0 0 10px rgba(0,0,0,0.1)',
                 borderRadius: '2rem',
                 padding: token.padding,
@@ -34,7 +34,7 @@ export function StaffCard({staff}) {
                 src={staff.imageUrl}
             />
             <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}}>
-                <Typography.Title level={4} style={{margin: 0, fontWeight: 'bolder', color: token.colorPrimary}}>
+                <Typography.Title level={4} style={{margin: 0, fontWeight: 'bolder'}}>
                     {staff.name}
                 </Typography.Title>
                 <Typography.Text type={'secondary'}>
