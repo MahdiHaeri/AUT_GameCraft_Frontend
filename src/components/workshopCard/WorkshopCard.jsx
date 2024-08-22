@@ -1,5 +1,4 @@
 import {Collapse, Flex, theme} from "antd";
-import {CaretRightOutlined} from "@ant-design/icons";
 import {WorkshopCollapseLabel} from "./component/WorkshopCollapseLabel.jsx";
 import {WorkshopCollapseChildren} from "./component/WorkshopCollapseChildren.jsx";
 import {useState} from "react";
@@ -37,7 +36,7 @@ export function WorkshopCard() {
                 size={"large"}
                 style={{
                     width: '100%',
-                    background: token.colorBgContainer,
+                    background: token.colorBgBase,
                     borderRadius: 0,
                     flex: 100,
                 }}
