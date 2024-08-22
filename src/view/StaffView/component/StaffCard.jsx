@@ -20,7 +20,7 @@ export function StaffCard({staff}) {
             style={{
                 width: '100%',
                 height: '300px',
-                backgroundColor: token.colorFillAlter,
+                backgroundColor: token.colorBgContainer,
                 boxShadow: '0 0 10px rgba(0,0,0,0.1)',
                 borderRadius: '2rem',
                 padding: token.padding,
