@@ -1,4 +1,4 @@
-import {ConfigProvider, theme} from "antd";
+import {ConfigProvider, message, notification, theme} from "antd";
 import '/src/assets/fonts/SF_Pro_Rounded/sfProRounded.css'
 import '/src/assets/fonts/IRANYekanX/fontiran.css'
 import '/src/assets/fonts/Estedad-v7.3/estedad.css'
@@ -35,8 +35,27 @@ export function AntDesignThemeConfigProvider({children}) {
                 // contentPadding: 0,
                 // headerPadding: 0,
             },
+            Message: {
+                contentBg: 'red',
+                colorBgBase: 'red'
+            }
         },
     }
+
+    message.config({
+        top: 0,
+        duration: 3,
+        maxCount: 3,
+        rtl: false,
+        prefixCls: 'my-message',
+    });
+
+    notification.config({
+        placement: 'bottomLeft',
+        duration: 3,
+        rtl: false,
+        prefixCls: 'my-notification',
+    });
 
     return (
         <ConfigProvider theme={customTheme} direction={direction}>

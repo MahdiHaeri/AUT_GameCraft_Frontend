@@ -1,4 +1,4 @@
-import {Button, Divider, Flex, Input, theme, Typography,} from "antd";
+import {Button, Divider, Flex, Input, message, notification, theme, Typography,} from "antd";
 import {NavLink} from "react-router-dom";
 import logo from '/src/assets/svg/light-3d-bulb.svg'
 import ROUTES from "/src/config/routes.js";
@@ -25,6 +25,7 @@ export function LoginForm() {
             const response= await login(email, password)
             localStorage.setItem('token', response.access)
             navigate(ROUTES.HOME)
+            notification.success({ message: "Login Successfully" })
         } catch (e) {
             console.error(e)
         } finally {
