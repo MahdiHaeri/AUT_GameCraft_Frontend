@@ -1,8 +1,11 @@
 import {Button, Divider, Flex, Input, theme, Typography,} from "antd";
 import {NavLink} from "react-router-dom";
 import logo from '/src/assets/svg/light-3d-bulb.svg'
-import ROUTES from "../../../config/routes.js";
+import ROUTES from "/src/config/routes.js";
 import {useTranslation} from "react-i18next";
+import {useState} from "react";
+import {login} from "/src/api/services/auth.js";
+import {useNavigate} from "react-router";
 
 
 const {useToken} = theme
@@ -10,6 +13,24 @@ const {useToken} = theme
 export function LoginForm() {
     const {token} = useToken()
     const {t} = useTranslation()
+    const navigate = useNavigate()
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [loading, setLoading] = useState(false)
+
+    const handleLogin = async () => {
+        try {
+            setLoading(true)
+            const response= await login(email, password)
+            localStorage.setItem('token', response.access)
+            navigate(ROUTES.HOME)
+        } catch (e) {
+            console.error(e)
+        } finally {
+            setLoading(false)
+        }
+    }
 
     return (
         <Flex
@@ -39,9 +60,19 @@ export function LoginForm() {
                     <img src={logo} alt={logo} width={'auto'} height={'50px'}/>
                 </Divider>
 
-                <Input placeholder={t('app.auth.email')} size={'large'} variant={'filled'}/>
+                <Input
+                    placeholder={t('app.auth.email')}
+                    size={'large'}
+                    variant={'filled'}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
 
-                <Input.Password placeholder={t('app.auth.password')} size={"large"} variant={'filled'}/>
+                <Input.Password
+                    placeholder={t('app.auth.password')}
+                    size={"large"}
+                    variant={'filled'}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
 
                 <Flex align={"center"} justify={"start"} style={{width: '100%'}}>
                     <NavLink to={"/forgot-password"} replace={true} style={{fontSize: 'small'}}>
@@ -56,7 +87,13 @@ export function LoginForm() {
                 style={{width: '100%'}}
                 gap={"small"}
             >
-                <Button type={"primary"} size={"large"} style={{width: '100%'}}>
+                <Button
+                    type={"primary"}
+                    size={"large"}
+                    style={{width: '100%'}}
+                    loading={loading}
+                    onClick={handleLogin}
+                >
                     {t('app.auth.login')}
                 </Button>
                 <Flex align={"center"} justify={"center"} gap={"small"}>
