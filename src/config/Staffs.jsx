@@ -1,6 +1,9 @@
+import {useTranslation} from "react-i18next";
+
 export function useStaffs() {
+    const {t} = useTranslation()
     const organizingTeam = {
-        teamTitle: 'Organizing Team',
+        teamTitle: t('app.staffs.organizingTeam.title'),
         teamMembers: [
             {
                 imageUrl: 'https://avatar.iran.liara.run/public/1',
@@ -31,7 +34,7 @@ export function useStaffs() {
     }
 
     const technicalTeam = {
-        teamTitle: 'Technical Team',
+        teamTitle: t('app.staffs.technicalTeam.title'),
         teamMembers: [
             {
                 imageUrl: 'https://avatar.iran.liara.run/public/1',
@@ -42,7 +45,7 @@ export function useStaffs() {
     }
 
     const scientificTeam = {
-        teamTitle: 'Scientific Team',
+        teamTitle: t('app.staffs.scientificTeam.title'),
         teamMembers: [
             {
                 imageUrl: 'https://avatar.iran.liara.run/public/1',
@@ -68,7 +71,7 @@ export function useStaffs() {
     }
 
     const marketingTeam = {
-        teamTitle: 'Marketing Team',
+        teamTitle: t('app.staffs.marketingTeam.title'),
         teamMembers: [
             {
                 imageUrl: 'https://avatar.iran.liara.run/public/1',
@@ -94,7 +97,7 @@ export function useStaffs() {
     }
 
     const contentCreationTeam = {
-        teamTitle: 'Content Creation Team',
+        teamTitle: t('app.staffs.contentCreationTeam.title'),
         teamMembers: [
             {
                 imageUrl: 'https://avatar.iran.liara.run/public/1',
@@ -180,7 +183,7 @@ export function useStaffs() {
     }
 
     const operationsTeam = {
-        teamTitle: 'Operations Team',
+        teamTitle: t('app.staffs.operationsTeam.title'),
         teamMembers: [
             {
                 imageUrl: 'https://avatar.iran.liara.run/public/1',

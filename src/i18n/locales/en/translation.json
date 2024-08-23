@@ -41,6 +41,27 @@
         "schedule": "Azar Month"
       }
     },
+    "staffs": {
+      "title": "Staffs",
+      "organizingTeam": {
+        "title": "Organizing Team"
+      },
+      "technicalTeam": {
+        "title": "Technical Team"
+      },
+      "scientificTeam": {
+        "title": "Scientific Team"
+      },
+      "marketingTeam": {
+        "title": "Marketing Team"
+      },
+      "contentCreationTeam": {
+        "title": "Content Creation Team"
+      },
+      "operationsTeam": {
+        "title": "Operations Team"
+      }
+    },
     "dashboard": {
       "event": "Event",
       "teamStatus": "Team Status",

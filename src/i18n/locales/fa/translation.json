@@ -41,6 +41,27 @@
         "schedule": "آذر ماه"
       }
     },
+    "staffs": {
+      "title": "تیم ما",
+      "organizingTeam": {
+        "title": "تیم برگزاری"
+      },
+      "technicalTeam": {
+        "title": "تیم فنی"
+      },
+      "scientificTeam": {
+        "title": "تیم علمی"
+      },
+      "marketingTeam": {
+        "title": "تیم بازاریابی"
+      },
+      "contentCreationTeam": {
+        "title": "تیم تولید محتوا"
+      },
+      "operationsTeam": {
+        "title": "تیم اجرایی"
+      }
+    },
     "dashboard": {
       "event": "رویداد",
       "teamStatus": "وضعیت تیم",

@@ -1,12 +1,14 @@
 import {StaffCard} from "./StaffCard.jsx";
 import {Col, Flex, Row, theme, Typography} from "antd";
 import {useStaffs} from '/src/config/Staffs.jsx'
+import {useTranslation} from "react-i18next";
 
 const {useToken} = theme
 
 export function StaffContainer() {
     const {token} = useToken()
     const staffs = useStaffs()
+    const {t} = useTranslation()
 
     return (
         <Flex
@@ -21,7 +23,7 @@ export function StaffContainer() {
             }}
         >
             <Typography.Title level={1} style={{fontWeight: "bolder", color: token.colorPrimary}}>
-                People
+                {t('app.staffs.title')}
             </Typography.Title>
             <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={50}>
                 {staffs.map((team, index) => (
