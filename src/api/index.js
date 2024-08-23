@@ -2,6 +2,9 @@ import axios from 'axios';
 
 const API = axios.create({
     baseURL: import.meta.env.VITE_API_URL, // Access the environment variable here
+    headers: {
+        'Content-Type': 'application/json',
+    },
 });
 
 // Request interceptor to add the JWT token conditionally
