@@ -52,7 +52,7 @@ export function GameCraftIntro({padding, backgroundColor}) {
                         </Flex>
                         <Typography.Title level={1} style={{
                             color: token.colorAction,
-                            fontWeight: "bolder",
+                            fontWeight: 1000,
                             fontSize: '5rem',
                             marginBottom: '1rem'
                         }}>
@@ -64,7 +64,7 @@ export function GameCraftIntro({padding, backgroundColor}) {
                         <Typography.Title level={4} style={{margin: '0px'}}>
                             {t('app.intro.description')}
                         </Typography.Title>
-                        <Flex align={"center"} justify={"center"} gap={"small"} wrap>
+                        <Flex align={"center"} justify={"start"} style={{width: '100%'}} gap={"small"} wrap>
                             <Button
                                 type={"primary"}
                                 size={"large"}

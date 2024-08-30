@@ -14,7 +14,7 @@ export function AntDesignThemeConfigProvider({children}) {
     const customTheme = {
         algorithm: darkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
         token: {
-            fontFamily: "Estedad-bold",
+            fontFamily: "Estedad, Vazirmatn, sans-serif",
             borderRadius: 16,
             colorPrimary: darkMode ? "#3c3a7d" : "#3c3a7d",
             colorBgBase: darkMode ? "#1E1E1E" : "#f5f5f5",

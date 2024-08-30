@@ -1,4 +1,6 @@
 import './App.css'
+import '/src/assets/fonts/Estedad-v7.3/estedad.css'
+import '/src/assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css'
 import {RouterProvider} from "react-router-dom";
 import router from "./routes/index.jsx";
 import {useTranslation} from "react-i18next";
