@@ -23,47 +23,47 @@ export function Sponsors({padding, backgroundColor}) {
             <Typography.Title level={1} style={{fontWeight: 'bolder'}}>
                 {t('app.sponsors.title')}
             </Typography.Title>
-            <Row align={"middle"} justify={"center"} gutter={[100, 32]}>
-                <Col>
+            <Row align={"middle"} justify={"center"} gutter={[32, 32]}>
+                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
                     <img
                         src={dropoutLogo}
                         alt={'dropoutLogo'}
-                        style={{width: '300px', height: "auto"}}
+                        style={{width: '100%', height: "auto"}}
                     />
                 </Col>
-                <Col>
+                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
                     <img
                         src={avagamesLogo}
                         alt={'dropoutLogo'}
-                        style={{width: '300px', height: "auto"}}
+                        style={{width: '100%', height: "auto"}}
                     />
                 </Col>
-                <Col>
+                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
                     <img
                         src={medrickLogo}
                         alt={'dropoutLogo'}
-                        style={{width: '300px', height: "auto"}}
+                        style={{width: '100%', height: "auto"}}
                     />
                 </Col>
-                <Col>
+                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
                     <img
                         src={dreamEventLogo}
                         alt={'dropoutLogo'}
-                        style={{width: '300px', height: "auto"}}
+                        style={{width: '100%', height: "auto"}}
                     />
                 </Col>
-                <Col>
+                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
                     <img
                         src={pgjLogo}
                         alt={'dropoutLogo'}
-                        style={{width: '300px', height: "auto"}}
+                        style={{width: '100%', height: "auto"}}
                     />
                 </Col>
-                <Col>
+                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
                     <img
                         src={myketLogo}
                         alt={'dropoutLogo'}
-                        style={{width: '300px', height: "auto"}}
+                        style={{width: '100%', height: "auto"}}
                     />
                 </Col>
             </Row>
