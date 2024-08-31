@@ -20,7 +20,12 @@ export function Sponsors({padding, backgroundColor}) {
                 backgroundColor: backgroundColor
             }}
         >
-            <Typography.Title level={1} style={{fontWeight: 'bolder'}}>
+            <Typography.Title
+                level={1}
+                style={{
+                    fontWeight: 900
+                }}
+            >
                 {t('app.sponsors.title')}
             </Typography.Title>
             <Row align={"middle"} justify={"center"} gutter={[32, 32]}>

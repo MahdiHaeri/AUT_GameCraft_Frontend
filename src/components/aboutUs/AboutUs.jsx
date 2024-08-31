@@ -25,12 +25,17 @@ export function AboutUs({padding, backgroundColor}) {
                 <Col span={24} lg={12}>
                     <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"small"}>
                         <Flex vertical align={"start"} justify={"center"} style={{width: '100%'}}>
-                            <Typography.Title level={1} style={{margin: '0px', fontWeight: 'bolder'}}>
+                            <Typography.Title
+                                level={1}
+                                style={{
+                                    fontWeight: 900
+                                }}
+                            >
                                 {t('app.aboutUs.title')}
                             </Typography.Title>
-                            <Typography.Title level={4} style={{margin: '0px'}}>
+                            <Typography.Paragraph>
                                 {t('app.aboutUs.description')}
-                            </Typography.Title>
+                            </Typography.Paragraph>
                         </Flex>
                         <Button
                             type={"primary"}

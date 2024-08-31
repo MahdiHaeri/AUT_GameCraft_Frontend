@@ -67,9 +67,9 @@ export function GameCraftIntro({padding, backgroundColor}) {
                         >
                             {t('app.intro.subtitle')}
                         </Typography.Title>
-                        <Typography.Title level={4} style={{margin: '0px'}}>
+                        <Typography.Paragraph>
                             {t('app.intro.description')}
-                        </Typography.Title>
+                        </Typography.Paragraph>
                         <Flex align={"center"} justify={"start"} style={{width: '100%'}} gap={"small"} wrap>
                             <Button
                                 type={"primary"}
