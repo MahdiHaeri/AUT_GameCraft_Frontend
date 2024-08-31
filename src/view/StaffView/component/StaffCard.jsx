@@ -34,7 +34,7 @@ export function StaffCard({staff}) {
                 src={staff.imageUrl}
             />
             <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}}>
-                <Typography.Title level={4} style={{margin: 0, fontWeight: 'bolder'}}>
+                <Typography.Title level={4} style={{margin: 0, fontWeight: 700}}>
                     {staff.name}
                 </Typography.Title>
                 <Typography.Text type={'secondary'}>
