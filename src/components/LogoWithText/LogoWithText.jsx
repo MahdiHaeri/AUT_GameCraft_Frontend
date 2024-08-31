@@ -1,12 +1,9 @@
-import {Flex, theme, Typography} from "antd";
+import {Flex, Typography} from "antd";
 import logo from '/src/assets/svg/dark-3d.svg'
 import {useTranslation} from "react-i18next";
 
-const {useToken} = theme
-
 export function LogoWithText() {
     const {t} = useTranslation()
-    const {token} = useToken();
 
     return (
         <Flex
@@ -15,12 +12,12 @@ export function LogoWithText() {
         >
             <Typography.Title
                 level={3}
+                type={"secondary"}
                 style={{
                     margin: '-5px',
-                    fontWeight: 'bolder',
+                    fontWeight: 1000,
                     opacity: '0.2',
                     color: 'white',
-                    fontFamily: 'Estedad-black'
                 }}
             >
                 {t('app.logo.game')}
@@ -30,12 +27,12 @@ export function LogoWithText() {
 
             <Typography.Title
                 level={3}
+                type={"secondary"}
                 style={{
                     margin: '-5px',
-                    fontWeight: 'bolder',
+                    fontWeight: 1000,
                     opacity: '0.2',
                     color: 'white',
-                    fontFamily: 'Estedad-black'
                 }}
             >
                 {t('app.logo.craft')}
