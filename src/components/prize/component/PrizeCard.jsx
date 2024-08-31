@@ -1,8 +1,6 @@
 import {Flex, Typography} from "antd";
-import {useTranslation} from "react-i18next";
 
 export function PrizeCard({teamImage, teamTitle, teamPrize}) {
-    const {t} = useTranslation()
     return (
         <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"small"}>
             <img src={teamImage} alt={'team-image'} width={'40%'} height={'auto'}/>
