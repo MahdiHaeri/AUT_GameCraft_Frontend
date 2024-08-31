@@ -61,7 +61,7 @@ export function GameCraftIntro({padding, backgroundColor}) {
                         <Typography.Title
                             level={3}
                             style={{
-                                fontWeight: 950,
+                                fontWeight: 900,
                                 margin: 0
                             }}
                         >
