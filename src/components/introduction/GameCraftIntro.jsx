@@ -58,7 +58,13 @@ export function GameCraftIntro({padding, backgroundColor}) {
                         }}>
                             {t('app.intro.title')}
                         </Typography.Title>
-                        <Typography.Title level={3} style={{fontWeight: "bold", margin: 0}}>
+                        <Typography.Title
+                            level={3}
+                            style={{
+                                fontWeight: 950,
+                                margin: 0
+                            }}
+                        >
                             {t('app.intro.subtitle')}
                         </Typography.Title>
                         <Typography.Title level={4} style={{margin: '0px'}}>

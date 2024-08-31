@@ -100,12 +100,18 @@
     },
     "prizes": {
       "title": "جوایز",
-      "firstTeam": "تیم اول",
-      "firstTeamPrize": "۹ میلیون تومان",
-      "secondTeam": "تیم دوم",
-      "secondTeamPrize": "۶ میلیون تومان",
-      "thirdTeam": "تیم سوم",
-      "thirdTeamPrize": "۳ میلیون تومان"
+      "firstTeam": {
+        "title": "تیم اول",
+        "prize": "۹ میلیون تومان"
+      },
+      "secondTeam": {
+        "title": "تیم دوم",
+        "prize": "۶ میلیون تومان"
+      },
+      "thirdTeam": {
+        "title": "تیم سوم",
+        "prize": "۳ میلیون تومان"
+      }
     },
     "sponsors": {
       "title": "حامیان"

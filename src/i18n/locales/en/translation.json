@@ -100,12 +100,18 @@
     },
     "prizes": {
       "title": "Prizes",
-      "firstTeam": "1st Team",
-      "firstTeamPrize": "9 Million Toman",
-      "secondTeam": "2nd Team",
-      "secondTeamPrize": "6 Million Toman",
-      "thirdTeam": "3rd Team",
-      "thirdTeamPrize": "3 Million Toman"
+      "firstTeam": {
+        "title": "1st Team",
+        "prize": "9 Million Toman"
+      },
+      "secondTeam": {
+        "title": "2nd Team",
+        "prize": "6 Million Toman"
+      },
+      "thirdTeam": {
+        "title": "3rd Team",
+        "prize": "3 Million Toman"
+      }
     },
     "sponsors": {
       "title": "Sponsors"

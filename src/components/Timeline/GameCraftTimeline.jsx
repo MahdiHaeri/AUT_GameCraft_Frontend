@@ -82,7 +82,7 @@ export function GameCraftTimeline({padding, backgroundColor}) {
                     }}
                 />
             </Flex>
-            <Typography.Title style={{marginBottom: '2rem'}}>
+            <Typography.Title style={{marginBottom: '2rem', fontWeight: 1000}}>
                 {t('app.timeline.title')}
             </Typography.Title>
             <Timeline items={items} mode={'alternate'} style={{width: '100%'}}/>

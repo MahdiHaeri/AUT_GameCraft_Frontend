@@ -1,14 +1,11 @@
 import {Flex, Typography} from "antd";
+import {useTranslation} from "react-i18next";
 
-export function TimelineChildren({title, time}) {
+export function PrizeCard({teamImage, teamTitle, teamPrize}) {
+    const {t} = useTranslation()
     return (
-        <Flex
-            vertical
-            align={"center"}
-            justify={"start"}
-            style={{width: '100%', height: "auto", aspectRatio: '2/1'}}
-            gap={"small"}
-        >
+        <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"small"}>
+            <img src={teamImage} alt={'team-image'} width={'40%'} height={'auto'}/>
             <Typography.Title
                 level={2}
                 style={{
@@ -16,7 +13,7 @@ export function TimelineChildren({title, time}) {
                     fontWeight: 800
                 }}
             >
-                {title}
+                {teamTitle}
             </Typography.Title>
             <Typography.Title
                 level={3}
@@ -27,7 +24,7 @@ export function TimelineChildren({title, time}) {
                     fontWeight: 400
                 }}
             >
-                {time}
+                {teamPrize}
             </Typography.Title>
         </Flex>
     )
