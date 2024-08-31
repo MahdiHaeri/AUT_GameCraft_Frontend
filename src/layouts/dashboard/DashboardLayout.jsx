@@ -1,7 +1,6 @@
 import {Button, Col, Flex, Image, Layout, Row, theme, Typography} from "antd";
 import backgroundPattern from "/src/assets/svg/pattern.svg";
-import logo from '/src/assets/svg/dark-3d.svg'
-import {Outlet, useNavigate} from "react-router";
+import {useNavigate} from "react-router";
 import {useDashboardNavigations} from "../../config/DashboardNavigations.jsx";
 import userImage from '/src/assets/svg/avatar-1.svg'
 import Constants from "/src/config/Constants.js";
@@ -30,7 +29,7 @@ export function DashboardLayout({children}) {
             gap={"large"}
         >
             <Flex align={"center"} justify={"center"} style={{width: '100%'}}>
-                <LogoWithText />
+                <LogoWithText/>
             </Flex>
             <Flex align={"center"} justify={"center"} style={{width: '100%'}}>
                 <Row align={"top"} justify={"center"} style={{width: '100%'}} gutter={[16, 16]}>
@@ -66,7 +65,8 @@ export function DashboardLayout({children}) {
                                             }
                                         />
                                     </Flex>
-                                    <Typography.Title level={4}> Mahdi Haeri</Typography.Title>
+                                    <Typography.Title level={4} style={{fontWeight: 800}}> Mahdi
+                                        Haeri</Typography.Title>
 
                                 </Flex>
                                 <Flex
