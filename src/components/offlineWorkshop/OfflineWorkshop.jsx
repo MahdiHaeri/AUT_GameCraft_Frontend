@@ -14,7 +14,13 @@ export function OfflineWorkshop({padding, backgroundColor}) {
             }}
             gap={"large"}
         >
-            <Typography.Title level={1} style={{margin: '0'}}>
+            <Typography.Title
+                level={1}
+                style={{
+                    margin: '0',
+                    fontWeight: 900
+                }}
+            >
                 Offline Workshop
             </Typography.Title>
             <Flex

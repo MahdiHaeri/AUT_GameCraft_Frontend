@@ -28,8 +28,14 @@ export function OnlineWorkshop({padding, backgroundColor}) {
                 }}
                 gap={"large"}
             >
-                <Typography.Title level={1} style={{margin: 0}}>
-                   Online Workshop
+                <Typography.Title
+                    level={1}
+                    style={{
+                        margin: 0,
+                        fontWeight: 900
+                    }}
+                >
+                    Online Workshop
                 </Typography.Title>
 
                 <Flex
@@ -45,7 +51,8 @@ export function OnlineWorkshop({padding, backgroundColor}) {
                     <WorkshopCard/>
                 </Flex>
             </Flex>
-            <Wave width={'100%'} height={'auto'} fill={token.colorPrimary} style={{transform: 'scaleY(-1) translateY(-2px)'}}/>
+            <Wave width={'100%'} height={'auto'} fill={token.colorPrimary}
+                  style={{transform: 'scaleY(-1) translateY(-2px)'}}/>
         </Flex>
     )
 }

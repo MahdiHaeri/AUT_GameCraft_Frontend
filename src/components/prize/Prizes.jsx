@@ -42,7 +42,7 @@ export function Prizes({padding, backgroundColor}) {
             <Typography.Title
                 level={1}
                 style={{
-                    fontWeight: 950,
+                    fontWeight: 900,
                 }}
             >
                 {t('app.prizes.title')}
