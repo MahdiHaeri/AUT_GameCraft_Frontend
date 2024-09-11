@@ -1,14 +1,16 @@
-import {Button, Col, Flex, Row, theme, Typography} from "antd";
+import {Button, Col, Flex, Grid, Row, theme, Typography} from "antd";
 import logo from '/src/assets/svg/dark-3d-bulb.svg'
 import {InstagramOutlined, XOutlined, YoutubeFilled} from "@ant-design/icons";
 import {useTranslation} from "react-i18next";
 import bubbleImg from '/src/assets/svg/bubble-purple.svg'
 
 const {useToken} = theme
+const {useBreakpoint} = Grid;
 
 export function GameCraftIntro({padding, backgroundColor}) {
     const {token} = useToken();
     const {t} = useTranslation()
+    const screens = useBreakpoint();
 
     return (
         <Flex
@@ -53,7 +55,7 @@ export function GameCraftIntro({padding, backgroundColor}) {
                         <Typography.Title level={1} style={{
                             color: token.colorAction,
                             fontWeight: 1000,
-                            fontSize: '5rem',
+                            fontSize: screens.lg ? '5rem' : screens.md ? '4rem' : '3rem',
                             marginBottom: '1rem'
                         }}>
                             {t('app.intro.title')}

@@ -1,7 +1,11 @@
-import {Flex, Typography} from "antd";
+import {Flex, Grid, Typography} from "antd";
 import {WorkshopCard} from "../workshopCard/WorkshopCard.jsx";
 
+const {useBreakpoint} = Grid;
+
 export function OfflineWorkshop({padding, backgroundColor}) {
+    const screens = useBreakpoint();
+
     return (
         <Flex
             vertical
@@ -15,10 +19,11 @@ export function OfflineWorkshop({padding, backgroundColor}) {
             gap={"large"}
         >
             <Typography.Title
-                level={1}
+                level={screens.md ? 1 : 2}
                 style={{
                     margin: '0',
-                    fontWeight: 900
+                    fontWeight: 900,
+                    textAlign: "center"
                 }}
             >
                 Offline Workshop

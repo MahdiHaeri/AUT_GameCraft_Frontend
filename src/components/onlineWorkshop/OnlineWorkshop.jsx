@@ -1,11 +1,13 @@
-import {Flex, theme, Typography} from "antd";
+import {Flex, Grid, theme, Typography} from "antd";
 import {Wave} from "../wave/Wave.jsx";
 import {WorkshopCard} from "../workshopCard/WorkshopCard.jsx";
 
 const {useToken} = theme
+const {useBreakpoint} = Grid;
 
 export function OnlineWorkshop({padding, backgroundColor}) {
     const {token} = useToken()
+    const screens = useBreakpoint();
 
     return (
         <Flex
@@ -29,10 +31,11 @@ export function OnlineWorkshop({padding, backgroundColor}) {
                 gap={"large"}
             >
                 <Typography.Title
-                    level={1}
+                    level={screens.md ? 1 : 2}
                     style={{
                         margin: 0,
-                        fontWeight: 900
+                        fontWeight: 900,
+                        textAlign: "center"
                     }}
                 >
                     Online Workshop
