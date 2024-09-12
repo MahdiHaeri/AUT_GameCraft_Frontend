@@ -25,7 +25,7 @@ export function LoginView() {
                     </Flex>
                 </Col>
                 <Col
-                    span={24}
+                    span={0}
                     order={1}
                     md={{span: 12, order: 2}}
                 >
