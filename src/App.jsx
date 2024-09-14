@@ -8,7 +8,7 @@ import {ThemeProvider} from "./hooks/context/ThemeContext.jsx";
 import AntDesignThemeConfigProvider from "./config/AntDesignThemeConfigProvider.jsx";
 
 function App() {
-    const {t, i18n} = useTranslation()
+    const {i18n} = useTranslation()
 
     document.body.dir = i18n.dir()
     return (

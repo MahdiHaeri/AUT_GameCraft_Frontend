@@ -1,4 +1,4 @@
-import {ConfigProvider, message, notification, theme} from "antd";
+import {ConfigProvider, message, notification} from "antd";
 import '/src/assets/fonts/SF_Pro_Rounded/sfProRounded.css'
 import '/src/assets/fonts/IRANYekanX/fontiran.css'
 import '/src/assets/fonts/Estedad-v7.3/estedad.css'
@@ -6,41 +6,13 @@ import '/src/assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css'
 import {useContext} from "react";
 import {ThemeContext} from "../hooks/context/ThemeContext.jsx";
 import i18n from "i18next";
+import {darkTheme} from "./theme/darkTheme.js";
+import {lightTheme} from "./theme/lightTheme.js";
 
 export function AntDesignThemeConfigProvider({children}) {
     const {darkMode} = useContext(ThemeContext);
     const direction = i18n.dir()
-
-    const customTheme = {
-        algorithm: darkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
-        token: {
-            fontFamily: "Estedad, Vazirmatn, sans-serif",
-            borderRadius: 16,
-            colorPrimary: darkMode ? "#3c3a7d" : "#3c3a7d",
-            colorBgBase: darkMode ? "#1E1E1E" : "#f5f5f5",
-            colorInfo: "#3c3a7d",
-            colorAction: "#01B582",
-        },
-
-        components: {
-            Timeline: {
-                dotBg: 'transparent',
-                tailColor: '#01B582',
-                tailWidth: 10,
-            },
-            Switch: {
-                // colorPrimary: '#fff3',
-            },
-            Collapse: {
-                // contentPadding: 0,
-                // headerPadding: 0,
-            },
-            Message: {
-                contentBg: 'red',
-                colorBgBase: 'red'
-            }
-        },
-    }
+    const dynamicTheme = darkMode ? darkTheme : lightTheme
 
     message.config({
         top: 0,
@@ -58,7 +30,7 @@ export function AntDesignThemeConfigProvider({children}) {
     });
 
     return (
-        <ConfigProvider theme={customTheme} direction={direction}>
+        <ConfigProvider theme={dynamicTheme} direction={direction}>
             {children}
         </ConfigProvider>
     )
