@@ -55,6 +55,12 @@
       "marketingTeam": {
         "title": "Marketing Team"
       },
+      "graphicTeam": {
+        "title": "Graphic Team"
+      },
+      "financeTeam": {
+        "title": "Finance Team"
+      },
       "contentCreationTeam": {
         "title": "Content Creation Team"
       },

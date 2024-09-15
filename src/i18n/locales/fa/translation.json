@@ -58,6 +58,12 @@
       "contentCreationTeam": {
         "title": "تیم تولید محتوا"
       },
+      "graphicTeam": {
+        "title": "تیم گرافیک"
+      },
+      "financeTeam": {
+        "title": "تیم مالی"
+      },
       "operationsTeam": {
         "title": "تیم اجرایی"
       }

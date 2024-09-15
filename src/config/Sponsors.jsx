@@ -1,8 +1,8 @@
-import cafeBazaarLogo from '/src/assets/images/sponsors/cafeBazaar.png'
-import dropoutLogo from "/src/assets/images/sponsors/dropout.png";
-import quizOfKingsLogo from "/src/assets/images/sponsors/quizOfKings.png";
-import paeezanLogo from "/src/assets/images/sponsors/paeezan.png";
-import incytelGamesLogo from "/src/assets/images/sponsors/incytelGames.png";
+import cafeBazaarLogo from '/src/assets/images/2024/sponsors/cafeBazaar.png'
+import dropoutLogo from "/src/assets/images/2024/sponsors/dropout.png";
+import quizOfKingsLogo from "/src/assets/images/2024/sponsors/quizOfKings.png";
+import paeezanLogo from "/src/assets/images/2024/sponsors/paeezan.png";
+import incytelGamesLogo from "/src/assets/images/2024/sponsors/incytelGames.png";
 
 export function useSponsors() {
     return [
