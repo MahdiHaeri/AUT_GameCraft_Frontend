@@ -33,7 +33,7 @@ export function DashboardLayout({children}) {
             </Flex>
             <Flex align={"center"} justify={"center"} style={{width: '100%'}}>
                 <Row align={"top"} justify={"center"} style={{width: '100%'}} gutter={[16, 16]}>
-                    <Col span={24} lg={8}>
+                    <Col span={24} md={6}>
                         <Flex
                             vertical
                             align={"center"}
@@ -99,7 +99,7 @@ export function DashboardLayout({children}) {
                             </Flex>
                         </Flex>
                     </Col>
-                    <Col span={24} lg={16}>
+                    <Col span={24} md={18}>
                         <Flex
                             vertical
                             align={"center"}
