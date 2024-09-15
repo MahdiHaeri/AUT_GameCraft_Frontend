@@ -1,14 +1,10 @@
-import {Col, Flex, Row, Typography} from "antd";
-import dropoutLogo from '/src/assets/images/logo/dropout.png'
-import avagamesLogo from '/src/assets/images/logo/avngames.png'
-import medrickLogo from '/src/assets/images/logo/medrick-logo.png'
-import dreamEventLogo from '/src/assets/images/logo/dream-event.png'
-import pgjLogo from '/src/assets/images/logo/pgj.png'
-import myketLogo from '/src/assets/images/logo/myket.png'
+import {Button, Col, Flex, Row, Typography} from "antd";
 import {useTranslation} from "react-i18next";
+import {useSponsors} from "/src/config/Sponsors.jsx";
 
 export function Sponsors({padding, backgroundColor}) {
     const {t} = useTranslation()
+    const sponsors = useSponsors()
     return (
         <Flex
             vertical
@@ -28,49 +24,37 @@ export function Sponsors({padding, backgroundColor}) {
             >
                 {t('app.sponsors.title')}
             </Typography.Title>
-            <Row align={"middle"} justify={"center"} gutter={[32, 32]}>
-                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
-                    <img
-                        src={dropoutLogo}
-                        alt={'dropoutLogo'}
-                        style={{width: '100%', height: "auto"}}
-                    />
-                </Col>
-                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
-                    <img
-                        src={avagamesLogo}
-                        alt={'dropoutLogo'}
-                        style={{width: '100%', height: "auto"}}
-                    />
-                </Col>
-                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
-                    <img
-                        src={medrickLogo}
-                        alt={'dropoutLogo'}
-                        style={{width: '100%', height: "auto"}}
-                    />
-                </Col>
-                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
-                    <img
-                        src={dreamEventLogo}
-                        alt={'dropoutLogo'}
-                        style={{width: '100%', height: "auto"}}
-                    />
-                </Col>
-                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
-                    <img
-                        src={pgjLogo}
-                        alt={'dropoutLogo'}
-                        style={{width: '100%', height: "auto"}}
-                    />
-                </Col>
-                <Col span={24} xxl={4} lg={6} md={8} sm={12}>
-                    <img
-                        src={myketLogo}
-                        alt={'dropoutLogo'}
-                        style={{width: '100%', height: "auto"}}
-                    />
-                </Col>
+            <Row align={"middle"} justify={"center"} style={{width: '100%'}} gutter={[32, 32]}>
+                {sponsors.map((sponsor, index) => (
+                    <Col span={24} xxl={4} lg={6} md={8} sm={12} key={index} style={{height: '200px'}}>
+                        <Flex
+                            align={"center"}
+                            justify={"center"}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                borderRadius: 10,
+                            }}
+                        >
+                            <Button
+                                type={'text'}
+                                style={{width: '100%', height: '100%'}}
+                                href={sponsor.link}
+                            >
+                                <img
+                                    src={sponsor.logo}
+                                    alt={sponsor.name}
+                                    style={{
+                                        width: 'auto',
+                                        height: 'auto',
+                                        maxWidth: '100%',
+                                        maxHeight: '100%'
+                                    }}
+                                />
+                            </Button>
+                        </Flex>
+                    </Col>
+                ))}
             </Row>
         </Flex>
     )
