@@ -114,7 +114,7 @@ export function DashboardLayout({children}) {
                             }}
                         >
                             <Typography.Title level={3} style={{margin: 0}}>
-                                {dashboardNavigations.find(item => item.route === location.pathname).name}
+                                {dashboardNavigations.find(item => item.route === location.pathname)?.name}
                             </Typography.Title>
                             <Divider type={"horizontal"} variant={"dashed"}/>
                             {children}
