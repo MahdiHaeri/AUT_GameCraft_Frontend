@@ -28,9 +28,9 @@ export function TeamMemberContainer() {
                         افراد تیم
                     </Typography.Title>
                 </Col>
-                {[1, 2, 3, 4].map((item) => (
+                {[1, 2, 3, 4].map((item, index) => (
                     <Col key={item} span={24} sm={12} lg={8}>
-                        <TeamMemberCard/>
+                        <TeamMemberCard isHead={index === 0}/>
                     </Col>
                 ))}
                 <Col span={24} sm={12} lg={8}>
