@@ -18,16 +18,18 @@ export function TeamMemberContainer() {
             }}
             gap={"small"}
         >
-            <Typography.Title level={4}>
-                افراد تیم
-            </Typography.Title>
             <Row
                 align={"middle"}
                 justify={"center"}
                 style={{width: '100%'}}
                 gutter={[16, 16]}
             >
-                {[1, 2, 3].map((item) => (
+                <Col span={24}>
+                    <Typography.Title level={4}>
+                        افراد تیم
+                    </Typography.Title>
+                </Col>
+                {[1, 2, 3, 4].map((item) => (
                     <Col key={item} span={24} sm={12} lg={8}>
                         <TeamMemberCard/>
                     </Col>
