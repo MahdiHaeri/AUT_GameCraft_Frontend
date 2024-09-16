@@ -18,7 +18,6 @@ export function TeamStatusView() {
             style={{
                 width: '100%',
             }}
-            // gap={"small"}
         >
             <TeamNameCard/>
             <TeamMemberContainer/>

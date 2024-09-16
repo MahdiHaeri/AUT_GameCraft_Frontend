@@ -24,7 +24,7 @@ export function TeamMemberContainer() {
                 gutter={[16, 16]}
             >
                 <Col span={24}>
-                    <Typography.Title level={4}>
+                    <Typography.Title level={4} style={{marginBottom: '1.5rem'}}>
                         افراد تیم
                     </Typography.Title>
                 </Col>
