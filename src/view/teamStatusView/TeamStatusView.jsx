@@ -20,10 +20,6 @@ export function TeamStatusView() {
             }}
             // gap={"small"}
         >
-            <Typography.Title level={3} style={{margin: 0}}>
-                {t('app.dashboard.teamStatus.label')}
-            </Typography.Title>
-            <Divider type={"horizontal"} variant={"dashed"}/>
             <TeamNameCard/>
             <TeamMemberContainer/>
         </Flex>

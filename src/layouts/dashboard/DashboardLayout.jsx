@@ -1,9 +1,8 @@
-import {Button, Col, Flex, Image, Layout, Row, theme, Typography} from "antd";
+import {Button, Col, Divider, Flex, Image, Row, theme, Typography} from "antd";
 import backgroundPattern from "/src/assets/svg/pattern.svg";
-import {useNavigate} from "react-router";
+import {useLocation, useNavigate} from "react-router";
 import {useDashboardNavigations} from "../../config/DashboardNavigations.jsx";
 import userImage from '/src/assets/svg/avatar-1.svg'
-import Constants from "/src/config/Constants.js";
 import {useTranslation} from "react-i18next";
 import {LogoWithText} from "../../components/LogoWithText/LogoWithText.jsx";
 import mahdiHaeri from '/src/assets/images/2024/staffs/mahdiHaeri.jpg'
@@ -15,6 +14,7 @@ export function DashboardLayout({children}) {
     const navigate = useNavigate()
     const dashboardNavigations = useDashboardNavigations()
     const {t} = useTranslation()
+    const location = useLocation()
 
     return (
         <Flex
@@ -113,6 +113,10 @@ export function DashboardLayout({children}) {
                                 padding: token.padding
                             }}
                         >
+                            <Typography.Title level={3} style={{margin: 0}}>
+                                {dashboardNavigations.find(item => item.route === location.pathname).name}
+                            </Typography.Title>
+                            <Divider type={"horizontal"} variant={"dashed"}/>
                             {children}
                         </Flex>
                     </Col>

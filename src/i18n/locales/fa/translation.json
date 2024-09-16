@@ -69,7 +69,7 @@
       }
     },
     "dashboard": {
-      "event": "رویداد",
+      "event": "رویداد ها",
       "teamStatus": {
         "label": "وضعیت تیم",
         "teamName": "نام تیم"

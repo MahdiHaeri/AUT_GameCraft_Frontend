@@ -69,7 +69,7 @@
       }
     },
     "dashboard": {
-      "event": "Event",
+      "event": "Events",
       "teamStatus": {
         "label": "Team Status",
         "teamName": "Team Name"
