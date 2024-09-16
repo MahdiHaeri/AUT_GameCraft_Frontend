@@ -14,7 +14,7 @@ export function TeamMemberCard() {
                 width: '100%',
                 height: '80px',
                 backgroundColor: token.colorBgContainer,
-                boxShadow: token.boxShadow,
+                boxShadow: token.boxShadowCard,
                 borderRadius: token.borderRadius,
                 padding: token.padding
             }}
