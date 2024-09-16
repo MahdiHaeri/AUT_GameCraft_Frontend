@@ -65,8 +65,9 @@ export function DashboardLayout({children}) {
                                             }
                                         />
                                     </Flex>
-                                    <Typography.Title level={4} style={{fontWeight: 800}}> Mahdi
-                                        Haeri</Typography.Title>
+                                    <Typography.Title level={4} style={{fontWeight: 800}}>
+                                        Mahdi Haeri
+                                    </Typography.Title>
 
                                 </Flex>
                                 <Flex
@@ -111,9 +112,7 @@ export function DashboardLayout({children}) {
                                 padding: token.padding
                             }}
                         >
-                            <Layout.Content>
-                                {children}
-                            </Layout.Content>
+                            {children}
                         </Flex>
                     </Col>
                 </Row>

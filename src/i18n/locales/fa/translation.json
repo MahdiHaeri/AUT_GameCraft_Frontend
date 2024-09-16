@@ -70,7 +70,10 @@
     },
     "dashboard": {
       "event": "رویداد",
-      "teamStatus": "وضعیت تیم",
+      "teamStatus": {
+        "label": "وضعیت تیم",
+        "teamName": "نام تیم"
+      },
       "games": "بازی‌ها",
       "shoppingBag": "سبد خرید"
     },

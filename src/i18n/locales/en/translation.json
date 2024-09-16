@@ -70,7 +70,10 @@
     },
     "dashboard": {
       "event": "Event",
-      "teamStatus": "Team Status",
+      "teamStatus": {
+        "label": "Team Status",
+        "teamName": "Team Name"
+      },
       "games": "Games",
       "shoppingBag": "Shopping Bag"
     },

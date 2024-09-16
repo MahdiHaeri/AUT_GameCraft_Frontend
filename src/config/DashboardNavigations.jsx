@@ -10,7 +10,7 @@ export const useDashboardNavigations = () => {
             route: ROUTES.EVENTS,
         },
         {
-            name: t('app.dashboard.teamStatus'),
+            name: t('app.dashboard.teamStatus.label'),
             route: ROUTES.TEAM_STATUS,
         },
         {

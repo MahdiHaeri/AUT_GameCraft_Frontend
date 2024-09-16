@@ -1,5 +1,5 @@
 import {Col, Flex, Row, Typography} from "antd";
-import {StaffCard} from "/src/view/StaffView/component/StaffCard.jsx";
+import {StaffCard} from "/src/view/staffView/component/StaffCard.jsx";
 
 export function WorkshopCollapseChildren() {
     return (

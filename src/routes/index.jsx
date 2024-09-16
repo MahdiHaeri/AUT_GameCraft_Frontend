@@ -5,12 +5,13 @@ import {LoginPage} from "../pages/LoginPage/LoginPage.jsx";
 import {SignUpPage} from "../pages/SignUpPage/SignUpPage.jsx";
 import {DashboardPage} from "../pages/DashboardPage/DashboardPage.jsx";
 import {NotFoundPage} from "../pages/NotFoundPage/NotFoundPage.jsx";
-import {StaffView} from "../view/StaffView/StaffView.jsx";
-import {HomeView} from "../view/HomeView/HomeView.jsx";
+import {StaffView} from "../view/staffView/StaffView.jsx";
+import {HomeView} from "../view/homeView/HomeView.jsx";
 import {FaqView} from "../view/FaqView/FaqView.jsx";
 import {BlogView} from "../view/blogView/BlogView.jsx";
 import {HistoryView} from "../view/historyView/HistoryView.jsx";
 import {SponsorsView} from "../view/sponsorsView /SponsorsView.jsx";
+import {TeamStatusView} from "../view/teamStatusView/TeamStatusView.jsx";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
         children: [
             {index: true, element: <Navigate to={ROUTES.EVENTS} replace={true}/>},
             {path: ROUTES.EVENTS, element: <div> Events </div>},
-            {path: ROUTES.TEAM_STATUS, element: <div> Team Status </div>},
+            {path: ROUTES.TEAM_STATUS, element: <TeamStatusView/>},
             {path: ROUTES.SHOPPING_BAG, element: <div> Shopping Bag </div>},
             {path: ROUTES.GAMES, element: <div> Games </div>},
         ]
