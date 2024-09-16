@@ -14,7 +14,6 @@ export function TeamMemberContainer() {
             justify={"center"}
             style={{
                 width: '100%',
-                // backgroundColor: 'blue'
             }}
             gap={"small"}
         >

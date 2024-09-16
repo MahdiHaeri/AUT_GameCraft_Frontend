@@ -1,4 +1,4 @@
-import {Divider, Flex, theme, Typography} from "antd";
+import {Flex, theme, Typography} from "antd";
 import {useTranslation} from "react-i18next";
 import {TeamMemberContainer} from "./component/TeamMemberContainer.jsx";
 
@@ -16,8 +16,6 @@ export function TeamStatusView() {
             justify={"center"}
             style={{
                 width: '100%',
-                // backgroundColor: 'red',
-                // padding: token.padding
             }}
             gap={"small"}
         >
