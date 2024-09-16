@@ -1,12 +1,13 @@
 import {Flex, theme, Typography} from "antd";
 import mahdiHaeri from '/src/assets/images/2024/staffs/mahdiHaeri.jpg'
 import crown from '/src/assets/images/logo/crown.png'
+import CrownBadge from "./CrownBadge.jsx";
 
 const {useToken} = theme
 
 export function TeamMemberCard({isHead}) {
     const {token} = useToken()
-    return (
+    const memberCard = (
         <Flex
             align={"center"}
             justify={"start"}
@@ -14,7 +15,6 @@ export function TeamMemberCard({isHead}) {
                 width: '100%',
                 height: '80px',
                 backgroundColor: isHead ? "rgba(255,215,0, 0.5)" : token.colorBgContainer,
-                // backgroundColor: token.colorBgContainer,
                 boxShadow: token.boxShadowCard,
                 borderRadius: token.borderRadius,
                 padding: token.padding,
@@ -34,23 +34,10 @@ export function TeamMemberCard({isHead}) {
                 }}
             />
             <Typography.Text> Mahdi Haeri </Typography.Text>
-            {isHead ?
-                <img
-                    src={crown}
-                    alt={'crown'}
-                    width={'auto'}
-                    height={'auto'}
-                    style={{
-                        maxWidth: '45px',
-                        maxHeight: '45px',
-                        position: 'absolute',
-                        // left: 0,
-                        right: -18,
-                        top: -30,
-                        rotate: '30deg'
-                    }}
-                /> : <></>
-            }
         </Flex>
+    )
+
+    return (
+        isHead ? <CrownBadge>{memberCard}</CrownBadge> : memberCard
     )
 }

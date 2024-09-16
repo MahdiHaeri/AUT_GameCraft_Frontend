@@ -1,6 +1,7 @@
 import {Button, Col, Flex, Row, theme, Typography} from "antd";
 import {TeamMemberCard} from "./TeamMemberCard.jsx";
 import {UserAddOutlined} from "@ant-design/icons";
+import CrownBadge from "./CrownBadge.jsx";
 
 const {useToken} = theme
 
