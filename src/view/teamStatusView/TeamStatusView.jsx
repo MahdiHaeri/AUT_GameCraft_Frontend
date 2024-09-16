@@ -24,10 +24,11 @@ export function TeamStatusView() {
             <Typography.Title level={3}>
                 {t('app.dashboard.teamStatus.label')}
             </Typography.Title>
+            <Divider variant={"dashed"} type={'horizontal'}/>
             <Typography.Title level={3}>
                 {t('app.dashboard.teamStatus.teamName')}
             </Typography.Title>
-            <Divider variant={"dashed"} type={'horizontal'}/>
+            {/*<Divider variant={"dashed"} type={'horizontal'}/>*/}
             <TeamMemberContainer/>
         </Flex>
     )

@@ -6,6 +6,7 @@ import userImage from '/src/assets/svg/avatar-1.svg'
 import Constants from "/src/config/Constants.js";
 import {useTranslation} from "react-i18next";
 import {LogoWithText} from "../../components/LogoWithText/LogoWithText.jsx";
+import mahdiHaeri from '/src/assets/images/2024/staffs/mahdiHaeri.jpg'
 
 const {useToken} = theme
 
@@ -57,7 +58,7 @@ export function DashboardLayout({children}) {
                                         }}
                                     >
                                         <Image
-                                            src={Constants.avatarUrl}
+                                            src={mahdiHaeri}
                                             width={'100%'}
                                             height={'auto'}
                                             placeholder={
