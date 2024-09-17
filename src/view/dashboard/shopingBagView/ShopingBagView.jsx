@@ -1,4 +1,4 @@
-import {Button, Flex, theme, Typography} from "antd";
+import {Button, ConfigProvider, Flex, theme, Typography} from "antd";
 import {WorkshopCard} from "../../../components/workshopCard/WorkshopCard.jsx";
 
 const {useToken} = theme
@@ -21,25 +21,58 @@ export function ShoppingBagView() {
             <WorkshopCard/>
             <Flex
                 align={"center"}
+                justify={"space-between"}
+                style={{
+                    width: '100%',
+                }}
+                gap={"middle"}
+            >
+                <Typography.Text>
+                    کد تخفیف دارید؟
+                </Typography.Text>
+                <ConfigProvider
+                    theme={
+                        {
+                            token: {
+                                colorPrimary: token.colorAction
+                            }
+                        }
+                    }
+                >
+                    <Button type={'dashed'}>
+                        وارد کردن
+                    </Button>
+                </ConfigProvider>
+            </Flex>
+            <Flex
+                vertical
+                align={"center"}
                 justify={"center"}
                 style={{
                     width: '100%',
                 }}
                 gap={"middle"}
             >
-                <Typography.Title
-                    level={4}
-                    style={{
-                        color: token.colorAction,
-                        fontWeight: 700,
-                        margin: 0
-                    }}
+                <ConfigProvider
+                    theme={
+                        {
+                            token: {
+                                colorPrimary: token.colorAction
+                            }
+                        }
+                    }
                 >
-                    ۱۲۰۰۰۰ تومان
-                </Typography.Title>
-                <Button type={'primary'} size={"large"} style={{backgroundColor: token.colorAction}}>
-                    پرداخت
-                </Button>
+                    <Button type={'primary'} size={"large"} block>
+                        <Flex align={"center"} justify={"center"} gap={"small"}>
+                            <Typography.Text style={{fontWeight: 900, color: 'white'}}>
+                                پرداخت
+                            </Typography.Text>
+                            <Typography.Text style={{fontWeight: 900, color: 'white'}}>
+                                ۱۲۰۰۰۰ تومان
+                            </Typography.Text>
+                        </Flex>
+                    </Button>
+                </ConfigProvider>
             </Flex>
 
         </Flex>
