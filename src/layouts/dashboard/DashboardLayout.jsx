@@ -113,7 +113,7 @@ export function DashboardLayout({children}) {
                                 padding: token.padding
                             }}
                         >
-                            <Typography.Title level={3} style={{margin: 0}}>
+                            <Typography.Title level={3} style={{margin: 0, fontWeight: 950}}>
                                 {dashboardNavigations.find(item => item.route === location.pathname)?.name}
                             </Typography.Title>
                             <Divider type={"horizontal"} variant={"dashed"}/>
