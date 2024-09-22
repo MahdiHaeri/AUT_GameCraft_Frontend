@@ -19,6 +19,36 @@ export function ShoppingBagView() {
             <WorkshopCard/>
             <WorkshopCard/>
             <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
+            <WorkshopCard/>
             <Flex
                 align={"center"}
                 justify={"space-between"}

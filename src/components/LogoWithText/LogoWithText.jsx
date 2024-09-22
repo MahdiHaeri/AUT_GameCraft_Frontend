@@ -1,4 +1,4 @@
-import {Flex, Typography} from "antd";
+import {Avatar, Flex, Typography} from "antd";
 import logo from '/src/assets/svg/dark-3d.svg'
 import {useTranslation} from "react-i18next";
 

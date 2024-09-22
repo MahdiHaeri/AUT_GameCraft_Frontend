@@ -11,11 +11,14 @@ body {
     background-color: lightyellow;
     overflow: auto;
     overflow-x: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
-/*::-webkit-scrollbar {*/
-/*    scrollbar-width: thin;*/
-/*}*/
+::-webkit-scrollbar {
+    scrollbar-width: none;
+    display: none;
+}
 
 /*::-webkit-scrollbar-track {*/
 /*    background-clip: border-box;*/
