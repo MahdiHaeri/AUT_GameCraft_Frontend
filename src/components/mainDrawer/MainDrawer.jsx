@@ -70,8 +70,7 @@ export function MainDrawer({open, toggleDrawerOpen}) {
                             shape={"circle"}
                             onClick={() => toggleTheme()}
                             size={"large"}
-                            icon={darkMode ? <MoonFilled/> :
-                                <SunFilled/>}
+                            icon={darkMode ? <MoonFilled/> : <SunFilled/>}
                         />
                         <Switch
                             checkedChildren={"En"}
@@ -86,7 +85,8 @@ export function MainDrawer({open, toggleDrawerOpen}) {
                     {MainNavigations.map(item => (
                         <Button
                             key={item.route}
-                            type={"default"}
+                            type={"dashed"}
+                            size={"large"}
                             onClick={() => {
                                 toggleDrawerOpen()
                                 navigate(item.route)
@@ -110,7 +110,8 @@ export function MainDrawer({open, toggleDrawerOpen}) {
                     >
                         <Button
                             style={{flex: 1}}
-                            type={'default'}
+                            size={"large"}
+                            type={'dashed'}
                             onClick={() => {
                                 toggleDrawerOpen()
                                 navigate(ROUTES.LOGIN)
@@ -121,6 +122,7 @@ export function MainDrawer({open, toggleDrawerOpen}) {
                         <Button
                             style={{flex: 1}}
                             type={'primary'}
+                            size={"large"}
                             onClick={() => {
                                 toggleDrawerOpen()
                                 navigate(ROUTES.SIGNUP)

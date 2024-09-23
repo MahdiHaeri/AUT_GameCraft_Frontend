@@ -1,12 +1,16 @@
-import {Drawer, Flex, theme} from "antd";
+import {Button, Drawer, Flex, Switch, theme} from "antd";
 import {useTranslation} from "react-i18next";
 import {DashboardNavigationCard} from "./DashboardNavigationCard.jsx";
+import {MoonFilled, SunFilled} from "@ant-design/icons";
+import {useContext} from "react";
+import {ThemeContext} from "../../../hooks/context/ThemeContext.jsx";
 
 const {useToken} = theme
 
 export function DashboardDrawer({open, toggleDrawerOpen}) {
     const {t, i18n} = useTranslation()
     const {token} = useToken();
+    const {darkMode, toggleTheme} = useContext(ThemeContext)
 
     return (
         <Drawer
@@ -36,6 +40,31 @@ export function DashboardDrawer({open, toggleDrawerOpen}) {
                     height: '100%',
                 }}
             >
+                <Flex
+                    align={"center"}
+                    justify={"space-around"}
+                    gap={"small"}
+                    style={{
+                        width: '100%'
+                    }}
+                >
+                    <Button
+                        type={"text"}
+                        shape={"circle"}
+                        onClick={() => toggleTheme()}
+                        size={"large"}
+                        icon={darkMode ? <MoonFilled/> : <SunFilled/>}
+                    />
+                    <Switch
+                        checkedChildren={"En"}
+                        unCheckedChildren={"Fa"}
+                        checked={i18n.language !== 'fa'}
+                        defaultChecked
+                        onClick={() => {
+                            i18n.changeLanguage(i18n.language === 'fa' ? 'en' : 'fa')
+                        }}
+                    />
+                </Flex>
                 <DashboardNavigationCard open={open} toggleDrawerOpen={toggleDrawerOpen}/>
             </Flex>
         </Drawer>

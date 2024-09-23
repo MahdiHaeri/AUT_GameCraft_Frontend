@@ -1,4 +1,4 @@
-import {Button, Flex, Image, theme, Typography} from "antd";
+import {Button, Flex, Grid, Image, theme, Typography} from "antd";
 import {useTranslation} from "react-i18next";
 import mahdiHaeri from '/src/assets/images/2024/staffs/mahdiHaeri.jpg'
 import userImage from '/src/assets/svg/avatar-1.svg'
@@ -7,12 +7,14 @@ import {useDashboardNavigations} from "/src/config/DashboardNavigations.jsx";
 
 
 const {useToken} = theme
+const {useBreakpoint} = Grid;
 
 export function DashboardNavigationCard({open, toggleDrawerOpen}) {
     const {t} = useTranslation()
     const {token} = useToken()
     const navigate = useNavigate()
     const dashboardNavigations = useDashboardNavigations()
+    const screens = useBreakpoint()
 
     return (
         <Flex
@@ -23,7 +25,7 @@ export function DashboardNavigationCard({open, toggleDrawerOpen}) {
                 backgroundColor: token.colorBgBase,
                 width: '100%',
                 borderRadius: token.borderRadius,
-                padding: token.padding
+                padding: screens.lg ? token.padding : 0
             }}
         >
             <Flex vertical align={"center"} justify={"center"} style={{width: '100%'}} gap={"small"}>

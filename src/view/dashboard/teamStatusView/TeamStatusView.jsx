@@ -1,7 +1,6 @@
-import {Divider, Flex, theme, Typography} from "antd";
+import {Flex, theme, Typography} from "antd";
 import {useTranslation} from "react-i18next";
 import {TeamMemberContainer} from "./component/TeamMemberContainer.jsx";
-import {TeamNameCard} from "./component/TeamNameCard.jsx";
 
 
 const {useToken} = theme
@@ -19,7 +18,9 @@ export function TeamStatusView() {
                 width: '100%',
             }}
         >
-            <TeamNameCard/>
+            <Typography.Title level={3} style={{margin: 0, fontWeight: 900, color: token.colorAction}}>
+                {t('app.dashboard.teamStatus.teamName')}
+            </Typography.Title>
             <TeamMemberContainer/>
         </Flex>
     )
