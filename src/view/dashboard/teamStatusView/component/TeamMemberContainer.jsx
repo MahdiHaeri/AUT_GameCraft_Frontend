@@ -29,7 +29,7 @@ export function TeamMemberContainer() {
                         افراد تیم
                     </Typography.Title>
                 </Col>
-                {[1, 2, 3, 4].map((item, index) => (
+                {[1, 2, 3, 4, 5, 6, 7].map((item, index) => (
                     <Col key={item} span={24} sm={12} lg={8}>
                         <TeamMemberCard isHead={index === 0}/>
                     </Col>

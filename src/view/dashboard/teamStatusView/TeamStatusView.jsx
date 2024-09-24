@@ -16,6 +16,7 @@ export function TeamStatusView() {
             justify={"center"}
             style={{
                 width: '100%',
+                padding: token.padding
             }}
         >
             <Typography.Title level={3} style={{margin: 0, fontWeight: 900, color: token.colorAction}}>

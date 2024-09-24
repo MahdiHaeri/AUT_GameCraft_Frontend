@@ -13,6 +13,7 @@ export function EventsView() {
             justify={"center"}
             style={{
                 width: '100%',
+                padding: token.padding
             }}
             gap={"large"}
         >

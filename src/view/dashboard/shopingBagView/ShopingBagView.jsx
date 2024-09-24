@@ -1,5 +1,6 @@
-import {Button, ConfigProvider, Flex, theme, Typography} from "antd";
+import {Flex, theme} from "antd";
 import {WorkshopCard} from "../../../components/workshopCard/WorkshopCard.jsx";
+import {PayBox} from "./component/PayBox.jsx";
 
 const {useToken} = theme
 
@@ -8,103 +9,73 @@ export function ShoppingBagView() {
     return (
         <Flex
             vertical
-            align={"center"}
-            justify={"center"}
+            flex={1}
             style={{
                 width: '100%',
+                overflow: "hidden"
             }}
-            gap={"large"}
         >
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <WorkshopCard/>
-            <Flex
-                align={"center"}
-                justify={"space-between"}
-                style={{
-                    width: '100%',
-                }}
-                gap={"middle"}
-            >
-                <Typography.Text>
-                    کد تخفیف دارید؟
-                </Typography.Text>
-                <ConfigProvider
-                    theme={
-                        {
-                            token: {
-                                colorPrimary: token.colorAction
-                            }
-                        }
-                    }
-                >
-                    <Button type={'dashed'}>
-                        وارد کردن
-                    </Button>
-                </ConfigProvider>
-            </Flex>
             <Flex
                 vertical
                 align={"center"}
                 justify={"center"}
+                flex={1}
                 style={{
                     width: '100%',
+                    padding: token.padding,
+                    paddingBottom: 0,
+                    paddingTop: 0,
+                    overflow: "hidden",
                 }}
-                gap={"middle"}
+                gap={"small"}
             >
-                <ConfigProvider
-                    theme={
-                        {
-                            token: {
-                                colorPrimary: token.colorAction
-                            }
-                        }
-                    }
+                <Flex
+                    vertical
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        overflowY: "scroll",
+                        borderRadius: token.borderRadius
+                    }}
+                    gap={"small"}
                 >
-                    <Button type={'primary'} size={"large"} block>
-                        <Flex align={"center"} justify={"center"} gap={"small"}>
-                            <Typography.Text style={{fontWeight: 900, color: 'white'}}>
-                                پرداخت
-                            </Typography.Text>
-                            <Typography.Text style={{fontWeight: 900, color: 'white'}}>
-                                ۱۲۰۰۰۰ تومان
-                            </Typography.Text>
-                        </Flex>
-                    </Button>
-                </ConfigProvider>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                    <WorkshopCard/>
+                </Flex>
             </Flex>
-
+            <PayBox/>
         </Flex>
     )
 }

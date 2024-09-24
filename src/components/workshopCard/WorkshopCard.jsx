@@ -26,7 +26,6 @@ export function WorkshopCard() {
                 width: '100%',
                 backgroundColor: '#FFE0B1',
                 borderRadius: token.borderRadius,
-                overflow: "hidden"
             }}
         >
             <div style={{height: '100%', flex: 2}}/>
@@ -38,6 +37,8 @@ export function WorkshopCard() {
                     width: '100%',
                     background: token.colorBgBase,
                     borderRadius: 0,
+                    borderEndEndRadius: '1rem',
+                    borderStartEndRadius: '1rem',
                     flex: 100,
                 }}
                 items={items}

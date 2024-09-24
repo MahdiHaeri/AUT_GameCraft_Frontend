@@ -20,7 +20,7 @@ export function DashboardNavigationCard({open, toggleDrawerOpen}) {
         <Flex
             vertical
             align={"center"}
-            justify={"center"}
+            justify={"start"}
             style={{
                 backgroundColor: token.colorBgBase,
                 width: '100%',
