@@ -34,7 +34,6 @@ export function DashboardLayout({children}) {
                     backgroundColor: token.colorPrimary,
                     backgroundImage: `url(${backgroundPattern})`,
                     padding: '1rem',
-                    overflowY: "hidden",
                 }}
                 gap={"large"}
             >
@@ -48,15 +47,13 @@ export function DashboardLayout({children}) {
                 <Flex
                     align={"start"}
                     justify={"center"}
-                    flex={1}
                     style={{
                         width: '100%',
-                        overflow: "hidden",
                     }}
                     gap={"small"}
                 >
                     {screens.lg ?
-                        <Flex flex={1} style={{position: "sticky"}}>
+                        <Flex flex={1} style={{position: "sticky", top: '.5rem'}}>
                             <DashboardNavigationCard/>
                         </Flex>
                         :
@@ -71,7 +68,6 @@ export function DashboardLayout({children}) {
                             backgroundColor: token.colorBgBase,
                             height: '100%',
                             borderRadius: token.borderRadius,
-                            overflow: "hidden"
                         }}
                     >
                         <Flex
@@ -99,10 +95,6 @@ export function DashboardLayout({children}) {
                                 <Divider
                                     type={"horizontal"}
                                     variant={"dashed"}
-                                    style={{
-                                        marginTop: '.5rem',
-                                        marginBottom: '.5rem'
-                                    }}
                                 />
                             </Flex>
                             <Flex
@@ -110,7 +102,6 @@ export function DashboardLayout({children}) {
                                 flex={1}
                                 style={{
                                     width: '100%',
-                                    overflowY: "scroll"
                                 }}
                             >
                                 {children}

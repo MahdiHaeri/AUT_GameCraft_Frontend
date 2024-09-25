@@ -49,8 +49,7 @@ export function DashboardHeader() {
                     maxHeight: '100px',
                     background: token.colorPrimary,
                     transition: 'box-shadow 0.3s',
-                    // boxShadow: shadow ? '0 10px 20px rgba(0, 0, 0, 0.5)' : 'none',
-                    boxShadow: '0 1px 20px rgba(0, 0, 0, 0.3)',
+                    boxShadow: shadow ? '0 10px 20px rgba(0, 0, 0, 0.5)' : 'none',
                     padding: '0.5rem 2rem',
                 }}
             >
