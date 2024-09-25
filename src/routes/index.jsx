@@ -14,6 +14,7 @@ import {SponsorsView} from "../view/sponsorsView /SponsorsView.jsx";
 import {TeamStatusView} from "../view/dashboard/teamStatusView/TeamStatusView.jsx";
 import {EventsView} from "../view/dashboard/eventsView/EventsView.jsx";
 import {ShoppingBagView} from "../view/dashboard/shopingBagView/ShopingBagView.jsx";
+import {GameView} from "../view/dashboard/gamesView/GameView.jsx";
 
 const router = createBrowserRouter([
     {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
             {path: ROUTES.EVENTS, element: <EventsView/>},
             {path: ROUTES.TEAM_STATUS, element: <TeamStatusView/>},
             {path: ROUTES.SHOPPING_BAG, element: <ShoppingBagView/>},
-            {path: ROUTES.GAMES, element: <div> Games </div>},
+            {path: ROUTES.GAMES, element: <GameView/>},
         ]
     },
     {path: ROUTES.LOGIN, element: <LoginPage/>},

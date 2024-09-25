@@ -96,7 +96,14 @@ export function DashboardLayout({children}) {
                                 <Typography.Title level={3} style={{margin: 0, fontWeight: 950}}>
                                     {dashboardNavigations.find(item => item.route === location.pathname)?.name}
                                 </Typography.Title>
-                                <Divider type={"horizontal"} variant={"dashed"}/>
+                                <Divider
+                                    type={"horizontal"}
+                                    variant={"dashed"}
+                                    style={{
+                                        marginTop: '.5rem',
+                                        marginBottom: '.5rem'
+                                    }}
+                                />
                             </Flex>
                             <Flex
                                 vertical
