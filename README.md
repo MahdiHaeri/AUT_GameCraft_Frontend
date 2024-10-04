@@ -1,5 +1,10 @@
 # GameCraft Frontend
 
+**Live Demo:**
+
+- **Vercel:** [aut-game-craft-frontend.vercel.app](https://aut-game-craft-frontend.vercel.app)
+- **GitLab Pages:** [aut-gamecraft.gitlab.io](https://aut-gamecraft.gitlab.io)
+
 ## Installation
 
 **Install dependencies:**
