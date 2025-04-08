@@ -68,8 +68,8 @@ export function ShoppingBagView() {
                 
                 <Row 
                     gutter={[
-                        { xs: 16, sm: 20, md: 24, lg: 32 },
-                        { xs: 16, sm: 20, md: 24, lg: 32 }
+                        { xs: 16, sm: 20, md: 24, lg: 24 },
+                        { xs: 16, sm: 20, md: 24, lg: 24 }
                     ]}
                     style={{
                         width: '100%',
@@ -79,13 +79,14 @@ export function ShoppingBagView() {
                     {cartItems.map((item, index) => (
                         <Col 
                             key={index}
-                            xs={24}
-                            sm={12}
-                            md={8}
-                            lg={8}
-                            xl={6}
+                            xs={24}    // 1 card per row on mobile (<576px)
+                            sm={24}    // 1 card per row on small screens (≥576px)
+                            md={12}    // 2 cards per row on medium screens (≥768px)
+                            lg={8}     // 3 cards per row on large and extra large screens (≥992px)
                             style={{
-                                marginBottom: '16px',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                marginBottom: '24px',
                             }}
                         >
                             <WorkshopCard {...item} />
