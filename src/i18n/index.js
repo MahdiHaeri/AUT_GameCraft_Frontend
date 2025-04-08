@@ -17,7 +17,7 @@ i18n
             translation: faTranslation,
         },
     },
-    // lng: 'en', // default language
+    lng: 'fa', // default language
     fallbackLng: 'en', // fallback language if the selected language doesn't have a translation
     interpolation: {
         escapeValue: false, // React already does escaping

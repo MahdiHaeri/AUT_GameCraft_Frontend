@@ -9,40 +9,40 @@
       "home": "Home",
       "news": "News",
       "faq": "FAQ",
-      "staffs": "Staffs",
+      "staffs": "Our Team",
       "history": "History",
       "sponsors": "Sponsors",
       "dashboard": "Dashboard"
     },
     "timeline": {
-      "title": "Timeline",
+      "title": "Event Timeline",
       "step1": {
-        "title": "Register",
-        "schedule": "Thursday, 13th of Mehr"
+        "title": "Registration",
+        "schedule": "Thursday, October 5th"
       },
       "step2": {
-        "title": "End of Registration",
-        "schedule": "Monday, 16th of Mehr"
+        "title": "Registration Deadline",
+        "schedule": "Sunday, October 8th"
       },
       "step3": {
-        "title": "Start Workshops",
-        "schedule": "16th of Mehr"
+        "title": "Workshops Begin",
+        "schedule": "October 8th"
       },
       "step4": {
-        "title": "End of Workshops",
-        "schedule": "Friday, 28th of Mehr"
+        "title": "Workshops End",
+        "schedule": "Friday, October 20th"
       },
       "step5": {
-        "title": "Start Match",
-        "schedule": "Aban Month"
+        "title": "Game Development",
+        "schedule": "November"
       },
       "step6": {
         "title": "Judging",
-        "schedule": "Azar Month"
+        "schedule": "December"
       }
     },
     "staffs": {
-      "title": "Staffs",
+      "title": "Our Team",
       "organizingTeam": {
         "title": "Organizing Team"
       },
@@ -55,14 +55,14 @@
       "marketingTeam": {
         "title": "Marketing Team"
       },
+      "contentCreationTeam": {
+        "title": "Content Creation Team"
+      },
       "graphicTeam": {
-        "title": "Graphic Team"
+        "title": "Graphic Design Team"
       },
       "financeTeam": {
         "title": "Finance Team"
-      },
-      "contentCreationTeam": {
-        "title": "Content Creation Team"
       },
       "operationsTeam": {
         "title": "Operations Team"
@@ -75,19 +75,19 @@
         "teamName": "Team Name"
       },
       "games": "Games",
-      "shoppingBag": "Shopping Bag"
+      "shoppingBag": "Shopping Cart"
     },
     "pages": {
-      "main": "Game Craft",
+      "main": "GameCraft",
       "home": "Home",
       "dashboard": "Dashboard",
-      "notFound": "Not Found",
+      "notFound": "Page Not Found",
       "login": "Login",
-      "signUp": "SignUp"
+      "signUp": "Sign Up"
     },
     "auth": {
       "login": "Login",
-      "signUp": "Signup",
+      "signUp": "Sign Up",
       "logout": "Logout",
       "register": "Register",
       "email": "Email",
@@ -100,25 +100,25 @@
     },
     "intro": {
       "title": "GameCraft",
-      "subtitle": "The best game development platform",
-      "description": "GameCraft is a platform for game developers to create, share and play games. It is a place where you can find the best games and the best developers. Join us now and start creating your own games!"
+      "subtitle": "The 4th Game Development Event at Amirkabir University of Technology",
+      "description": "GameCraft is a game development event aimed at inspiring and nurturing passion in game design enthusiasts. Hosted by Amirkabir University of Technology, this year's event focuses on creating a platform for knowledge transfer and networking among game development experts.\nThe event includes in-person workshops, presentations, and a game development competition. Winners will be recognized and awarded at the closing ceremony."
     },
     "aboutUs": {
       "title": "About Us",
-      "description": "GameCraft is a platform for game developers to create, share and play games. It is a place where you can find the best games and the best developers. Join us now and start creating your own games!"
+      "description": "The Computer Science Student Association at Amirkabir University is an independent organization dedicated to scientific and educational activities. Each year, the association hosts numerous academic and educational events at university, national, and international levels, attracting a large audience. Notable events include ACM competitions, Linux festivals, DMC data mining competitions, and AAISS artificial intelligence seminars.\nOne of the association's key approaches is strengthening team spirit and large-scale collaboration, helping students gain valuable experience for their professional lives. This event is no exception, with many students actively participating in the association's initiatives."
     },
     "prizes": {
       "title": "Prizes",
       "firstTeam": {
-        "title": "1st Team",
+        "title": "First Place",
         "prize": "9 Million Toman"
       },
       "secondTeam": {
-        "title": "2nd Team",
+        "title": "Second Place",
         "prize": "6 Million Toman"
       },
       "thirdTeam": {
-        "title": "3rd Team",
+        "title": "Third Place",
         "prize": "3 Million Toman"
       }
     },
@@ -126,7 +126,7 @@
       "title": "Sponsors"
     },
     "footer": {
-      "autGameCraft": "Aut GameCraft",
+      "autGameCraft": "Amirkabir GameCraft",
       "copyRight": "© 2024 GameCraft. All rights reserved."
     }
   },
@@ -134,17 +134,17 @@
     "submit": "Submit",
     "logout": "Logout",
     "login": "Login",
-    "signup": "SignUp",
+    "signup": "Sign Up",
     "cancel": "Cancel",
     "events": "Events",
     "teamStatus": "Team Status",
     "games": "Games",
-    "shoppingBag": "Shopping Bag",
-    "staffs": "Staffs",
+    "shoppingBag": "Shopping Cart",
+    "staffs": "Our Team",
     "backToHome": "Back to Home"
   },
   "error": {
-    "404": "page not found",
-    "500": "internal server error"
+    "404": "Page Not Found",
+    "500": "Internal Server Error"
   }
 }
