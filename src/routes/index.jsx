@@ -15,6 +15,7 @@ import {TeamStatusView} from "../view/dashboard/teamStatusView/TeamStatusView.js
 import {EventsView} from "../view/dashboard/eventsView/EventsView.jsx";
 import {ShoppingBagView} from "../view/dashboard/shopingBagView/ShopingBagView.jsx";
 import {GameView} from "../view/dashboard/gamesView/GameView.jsx";
+import {ForgotPasswordPage} from "../pages/ForgotPasswordPage/ForgotPasswordPage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
     },
     {path: ROUTES.LOGIN, element: <LoginPage/>},
     {path: ROUTES.SIGNUP, element: <SignUpPage/>},
+    {path: ROUTES.FORGOT_PASSWORD, element: <ForgotPasswordPage/>},
     {path: '*', element: <NotFoundPage/>},
 ]);
 

@@ -83,7 +83,8 @@
       "dashboard": "Dashboard",
       "notFound": "Page Not Found",
       "login": "Login",
-      "signUp": "Sign Up"
+      "signUp": "Sign Up",
+      "forgotPassword": "Forgot Password"
     },
     "auth": {
       "login": "Login",
@@ -96,7 +97,13 @@
       "phoneNumber": "Phone Number",
       "forgotPassword": "Forgot Password?",
       "doNotHaveAccount": "Don't have an account?",
-      "alreadyHaveAccount": "Already have an account?"
+      "alreadyHaveAccount": "Already have an account?",
+      "resetPassword": "Reset Password",
+      "resetPasswordInstructions": "Enter your email address and we'll send you instructions to reset your password.",
+      "sendResetLink": "Send Reset Link",
+      "backToLogin": "Back to Login",
+      "resetLinkSent": "Reset link has been sent to your email",
+      "resetLinkError": "Failed to send reset link. Please try again."
     },
     "intro": {
       "title": "GameCraft",
@@ -141,7 +148,9 @@
     "games": "Games",
     "shoppingBag": "Shopping Cart",
     "staffs": "Our Team",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "sendResetLink": "Send Reset Link",
+    "backToLogin": "Back to Login"
   },
   "error": {
     "404": "Page Not Found",

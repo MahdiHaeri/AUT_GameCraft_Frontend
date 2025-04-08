@@ -83,7 +83,8 @@
       "dashboard": "داشبورد",
       "notFound": "صفحه یافت نشد",
       "login": "ورود",
-      "signUp": "ثبت‌نام"
+      "signUp": "ثبت‌نام",
+      "forgotPassword": "فراموشی رمز عبور"
     },
     "auth": {
       "login": "ورود",
@@ -96,7 +97,13 @@
       "phoneNumber": "شماره تلفن",
       "forgotPassword": "رمز عبور خود را فراموش کرده‌اید؟",
       "doNotHaveAccount": "حساب کاربری ندارید؟",
-      "alreadyHaveAccount": "حساب کاربری دارید؟"
+      "alreadyHaveAccount": "حساب کاربری دارید؟",
+      "resetPassword": "بازیابی رمز عبور",
+      "resetPasswordInstructions": "آدرس ایمیل خود را وارد کنید تا دستورالعمل‌های بازیابی رمز عبور را برای شما ارسال کنیم.",
+      "sendResetLink": "ارسال لینک بازیابی",
+      "backToLogin": "بازگشت به صفحه ورود",
+      "resetLinkSent": "لینک بازیابی به ایمیل شما ارسال شد",
+      "resetLinkError": "ارسال لینک بازیابی با مشکل مواجه شد. لطفاً دوباره تلاش کنید."
     },
     "intro": {
       "title": "گیم‌کرفت",
@@ -141,7 +148,9 @@
     "games": "بازی‌ها",
     "shoppingBag": "سبد خرید",
     "staffs": "تیم ما",
-    "backToHome": "بازگشت به خانه"
+    "backToHome": "بازگشت به خانه",
+    "sendResetLink": "ارسال لینک بازیابی",
+    "backToLogin": "بازگشت به صفحه ورود"
   },
   "error": {
     "404": "صفحه یافت نشد",
