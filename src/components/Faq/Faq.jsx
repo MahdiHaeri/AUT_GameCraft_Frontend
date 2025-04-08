@@ -1,4 +1,4 @@
-import {Flex, theme, Typography, Collapse, Space, Divider, Card} from "antd";
+import {Flex, theme, Typography, Collapse, Space, Card} from "antd";
 import {useTranslation} from "react-i18next";
 import {QuestionCircleOutlined} from '@ant-design/icons';
 
@@ -14,11 +14,13 @@ export function Faq() {
             label: (
                 <Space>
                     <QuestionCircleOutlined style={{ color: token.colorPrimary }} />
-                    <span>{t('app.faq.howToParticipate.title')}</span>
+                    <Typography.Text strong style={{ fontSize: '16px' }}>
+                        {t('app.faq.howToParticipate.title')}
+                    </Typography.Text>
                 </Space>
             ),
             children: (
-                <Typography.Paragraph style={{ fontSize: '1rem', lineHeight: 1.6 }}>
+                <Typography.Paragraph style={{ fontSize: '16px', lineHeight: 1.6 }}>
                     {t('app.faq.howToParticipate.content')}
                 </Typography.Paragraph>
             ),
@@ -28,11 +30,13 @@ export function Faq() {
             label: (
                 <Space>
                     <QuestionCircleOutlined style={{ color: token.colorPrimary }} />
-                    <span>{t('app.faq.competitionRules.title')}</span>
+                    <Typography.Text strong style={{ fontSize: '16px' }}>
+                        {t('app.faq.competitionRules.title')}
+                    </Typography.Text>
                 </Space>
             ),
             children: (
-                <Typography.Paragraph style={{ fontSize: '1rem', lineHeight: 1.6 }}>
+                <Typography.Paragraph style={{ fontSize: '16px', lineHeight: 1.6 }}>
                     {t('app.faq.competitionRules.content')}
                 </Typography.Paragraph>
             ),
@@ -42,11 +46,13 @@ export function Faq() {
             label: (
                 <Space>
                     <QuestionCircleOutlined style={{ color: token.colorPrimary }} />
-                    <span>{t('app.faq.judgingCriteria.title')}</span>
+                    <Typography.Text strong style={{ fontSize: '16px' }}>
+                        {t('app.faq.judgingCriteria.title')}
+                    </Typography.Text>
                 </Space>
             ),
             children: (
-                <Typography.Paragraph style={{ fontSize: '1rem', lineHeight: 1.6 }}>
+                <Typography.Paragraph style={{ fontSize: '16px', lineHeight: 1.6 }}>
                     {t('app.faq.judgingCriteria.content')}
                 </Typography.Paragraph>
             ),
@@ -56,11 +62,13 @@ export function Faq() {
             label: (
                 <Space>
                     <QuestionCircleOutlined style={{ color: token.colorPrimary }} />
-                    <span>{t('app.faq.submissionDeadline.title')}</span>
+                    <Typography.Text strong style={{ fontSize: '16px' }}>
+                        {t('app.faq.submissionDeadline.title')}
+                    </Typography.Text>
                 </Space>
             ),
             children: (
-                <Typography.Paragraph style={{ fontSize: '1rem', lineHeight: 1.6 }}>
+                <Typography.Paragraph style={{ fontSize: '16px', lineHeight: 1.6 }}>
                     {t('app.faq.submissionDeadline.content')}
                 </Typography.Paragraph>
             ),
@@ -68,80 +76,52 @@ export function Faq() {
     ];
 
     return (
-        <Flex
-            align={"center"}
-            justify={"center"}
+        <Card
             style={{
+                backgroundColor: token.colorBgBase,
                 width: '100%',
                 maxWidth: '1000px',
-                margin: '0 auto',
+                borderRadius: token.borderRadiusLG,
+                boxShadow: token.boxShadow,
+                border: 'none',
             }}
-            vertical
-            gap="large"
         >
-            <Card
-                style={{
-                    width: '100%',
-                    backgroundColor: token.colorBgBase,
-                    borderRadius: token.borderRadiusLG,
-                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
-                    border: 'none',
-                    overflow: 'hidden',
-                }}
-                bodyStyle={{
-                    padding: '3rem',
-                }}
-            >
-                <Space direction="vertical" align="center" size="large" style={{ width: '100%' }}>
-                    <div style={{ 
-                        textAlign: 'center', 
-                        marginBottom: '2rem',
-                        position: 'relative',
-                    }}>
-                        <Typography.Title 
-                            level={1} 
-                            style={{
-                                fontWeight: "bolder", 
-                                color: token.colorPrimary,
-                                margin: 0,
-                                fontSize: '2.5rem',
-                                background: `linear-gradient(135deg, ${token.colorPrimary} 0%, ${token.colorPrimaryBg} 100%)`,
-                                WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: 'transparent',
-                            }}
-                        >
-                            {t('app.faq.title')}
-                        </Typography.Title>
-                        
-                        <Divider style={{ 
-                            margin: '1rem 0', 
-                            borderColor: token.colorBorderSecondary,
-                            width: '80%',
-                            margin: '1rem auto',
-                        }} />
-                        
-                        <Typography.Title 
-                            level={3} 
-                            style={{
-                                color: token.colorTextSecondary,
-                                margin: 0,
-                                fontWeight: 500,
-                            }}
-                        >
-                            {t('app.faq.competitionConditions')}
-                        </Typography.Title>
-                    </div>
-                    
-                    <Collapse 
-                        items={items} 
+            <Flex vertical align="center" gap="large" style={{ width: '100%' }}>
+                <Space direction="vertical" align="center" size={16}>
+                    <Typography.Title
+                        level={1}
                         style={{
-                            width: '100%',
+                            fontWeight: 900,
+                            color: token.colorPrimary,
+                            textAlign: 'center',
+                            margin: 0,
                         }}
-                        expandIconPosition="end"
-                        ghost
-                    />
+                    >
+                        {t('app.faq.title')}
+                    </Typography.Title>
+
+                    <Typography.Title
+                        level={3}
+                        style={{
+                            color: token.colorTextSecondary,
+                            textAlign: 'center',
+                            fontWeight: 500,
+                            marginTop: '0.5rem',
+                        }}
+                    >
+                        {t('app.faq.competitionConditions')}
+                    </Typography.Title>
                 </Space>
-            </Card>
-        </Flex>
+
+                <Collapse
+                    items={items}
+                    style={{ width: '100%' }}
+                    size="large"
+                    expandIconPosition="end"
+                    bordered={false}
+                    defaultActiveKey={['1']}
+                />
+            </Flex>
+        </Card>
     )
 }
