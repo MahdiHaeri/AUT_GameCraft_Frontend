@@ -135,6 +135,26 @@
     "footer": {
       "autGameCraft": "Amirkabir GameCraft",
       "copyRight": "© 2024 GameCraft. All rights reserved."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "competitionConditions": "Competition Conditions",
+      "howToParticipate": {
+        "title": "How to participate?",
+        "content": "To participate in GameCraft, you need to register through our website during the registration period. Teams can consist of 2-4 members. After registration, you'll receive access to workshops and resources. Make sure to attend all required workshops and follow the competition guidelines."
+      },
+      "competitionRules": {
+        "title": "Competition Rules",
+        "content": "Teams must develop an original game concept. The game should be developed using the technologies and frameworks covered in the workshops. All team members must contribute to the development process. The final submission must include the game executable, source code, and documentation."
+      },
+      "judgingCriteria": {
+        "title": "Judging Criteria and Prizes",
+        "content": "Games will be evaluated based on creativity, technical implementation, user experience, and innovation. The judging panel consists of industry experts and academic professionals. Prizes will be awarded to the top three teams, with additional recognition for special achievements in specific categories."
+      },
+      "submissionDeadline": {
+        "title": "Submission Deadline",
+        "content": "The final submission deadline is December 15th, 2024. Teams must submit their complete game package by this date. Late submissions will not be accepted. Make sure to test your game thoroughly before submission and include all required documentation."
+      }
     }
   },
   "button": {
