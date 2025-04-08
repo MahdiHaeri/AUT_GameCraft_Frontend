@@ -175,5 +175,15 @@
   "error": {
     "404": "Page Not Found",
     "500": "Internal Server Error"
+  },
+  "workshop": {
+    "inPerson": "In Person",
+    "addToCart": "Add to Cart",
+    "presenters": "Presenters",
+    "onlineWorkshops": "Online Workshops",
+    "offlineWorkshops": "In-Person Workshops"
+  },
+  "common": {
+    "currency": "Toman"
   }
 }

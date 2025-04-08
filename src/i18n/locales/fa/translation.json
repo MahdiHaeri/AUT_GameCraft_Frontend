@@ -175,5 +175,15 @@
   "error": {
     "404": "صفحه یافت نشد",
     "500": "خطای سرور داخلی"
+  },
+  "workshop": {
+    "inPerson": "حضوری",
+    "addToCart": "اضافه به سبد خرید",
+    "presenters": "ارائه دهندگان",
+    "onlineWorkshops": "کارگاه‌های آنلاین",
+    "offlineWorkshops": "کارگاه‌های حضوری"
+  },
+  "common": {
+    "currency": "تومان"
   }
 }
